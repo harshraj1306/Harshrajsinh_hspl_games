@@ -1,0 +1,391 @@
+@charset "UTF-8";
+body {
+  background: #BBB;
+  text-align: center;
+  padding: 4em;
+  font-size: 1.2em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    top: 100%;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+.card {
+  cursor: pointer;
+  font-size: 3em;
+}
+
+.cards--poker .card .back {
+  background: #bf0000;
+  overflow: hidden;
+}
+
+.cards--poker .card .face {
+  color: #bf0000;
+}
+
+.cards--poker .card.diamonds .face,
+.cards--poker .card.hearts .face {
+  color: #bf0000;
+}
+
+.cards--poker .card.spades .face,
+.cards--poker .card.clubs .face {
+  color: #000;
+}
+
+.cards--poker .card .rank {
+  display: block;
+  position: absolute;
+  padding: 0.5em 0.6em;
+  font-size: 0.25em;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+}
+
+.cards--poker .card .suit {
+  padding: 1.4em 0em;
+  display: block;
+  font-size: 0.32em;
+  letter-spacing: -0.085em;
+  white-space: pre;
+  line-height: 0.75;
+}
+
+.cards--poker .card.rank-A .suit,
+.cards--poker .card.rank-J .suit,
+.cards--poker .card.rank-Q .suit,
+.cards--poker .card.rank-K .suit {
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 0.55em 0;
+}
+
+.cards--poker .card.rank-J .suit:after {
+  content: "♟";
+}
+
+.cards--poker .card.rank-Q .suit:after {
+  content: "♛";
+}
+
+.cards--poker .card.rank-K .suit:after {
+  content: "♚";
+}
+
+/* diamonds */
+.cards--poker .card.diamonds .rank:after {
+  content: " ♦";
+}
+
+.cards--poker .card.rank-A.diamonds .suit:after {
+  content: "♦";
+}
+
+.cards--poker .card.rank-2.diamonds .suit:after {
+  content: "♦\a\a♦";
+}
+
+.cards--poker .card.rank-3.diamonds .suit:after {
+  content: "♦\a♦\a♦";
+}
+
+.cards--poker .card.rank-4.diamonds .suit:after {
+  content: "♦   ♦\a\a♦   ♦";
+}
+
+.cards--poker .card.rank-5.diamonds .suit:after {
+  content: "♦   ♦\a♦\a♦   ♦";
+}
+
+.cards--poker .card.rank-6.diamonds .suit:after {
+  content: "♦   ♦\a♦   ♦\a♦   ♦";
+}
+
+.cards--poker .card.rank-7.diamonds .suit:after {
+  content: "♦  ♦\a♦ ♦ ♦\a♦  ♦";
+}
+
+.cards--poker .card.rank-8.diamonds .suit:after {
+  content: "♦ ♦ ♦\a♦  ♦\a♦ ♦ ♦";
+}
+
+.cards--poker .card.rank-9.diamonds .suit:after {
+  content: "♦ ♦ ♦\a♦ ♦ ♦\a♦ ♦ ♦";
+}
+
+.cards--poker .card.rank-10.diamonds .suit:after {
+  content: "♦ ♦ ♦\a♦ ♦ ♦ ♦\a♦ ♦ ♦";
+}
+
+/* hearts */
+.card.hearts .rank:after {
+  content: " ♥";
+}
+
+.cards--poker .card.rank-A.hearts .suit:after {
+  content: "♥";
+}
+
+.cards--poker .card.rank-2.hearts .suit:after {
+  content: "♥\a\a♥";
+}
+
+.cards--poker .card.rank-3.hearts .suit:after {
+  content: "♥\a♥\a♥";
+}
+
+.cards--poker .card.rank-4.hearts .suit:after {
+  content: "♥   ♥\a\a♥   ♥";
+}
+
+.cards--poker .card.rank-5.hearts .suit:after {
+  content: "♥   ♥\a♥\a♥   ♥";
+}
+
+.cards--poker .card.rank-6.hearts .suit:after {
+  content: "♥   ♥\a♥   ♥\a♥   ♥";
+}
+
+.cards--poker .card.rank-7.hearts .suit:after {
+  content: "♥  ♥\a♥ ♥ ♥\a♥  ♥";
+}
+
+.cards--poker .card.rank-8.hearts .suit:after {
+  content: "♥ ♥ ♥\a♥  ♥\a♥ ♥ ♥";
+}
+
+.cards--poker .card.rank-9.hearts .suit:after {
+  content: "♥ ♥ ♥\a♥ ♥ ♥\a♥ ♥ ♥";
+}
+
+.cards--poker .card.rank-10.hearts .suit:after {
+  content: "♥ ♥ ♥\a♥ ♥ ♥ ♥\a♥ ♥ ♥";
+}
+
+/* spades */
+.cards--poker .card.spades .rank:after {
+  content: " ♠";
+}
+
+.cards--poker .card.rank-A.spades .suit:after {
+  content: "♠";
+}
+
+.cards--poker .card.rank-2.spades .suit:after {
+  content: "♠\a\a♠";
+}
+
+.cards--poker .card.rank-3.spades .suit:after {
+  content: "♠\a♠\a♠";
+}
+
+.cards--poker .card.rank-4.spades .suit:after {
+  content: "♠   ♠\a\a♠   ♠";
+}
+
+.cards--poker .card.rank-5.spades .suit:after {
+  content: "♠   ♠\a♠\a♠   ♠";
+}
+
+.cards--poker .card.rank-6.spades .suit:after {
+  content: "♠   ♠\a♠   ♠\a♠   ♠";
+}
+
+.cards--poker .card.rank-7.spades .suit:after {
+  content: "♠  ♠\a♠ ♠ ♠\a♠  ♠";
+}
+
+.cards--poker .card.rank-8.spades .suit:after {
+  content: "♠ ♠ ♠\a♠  ♠\a♠ ♠ ♠";
+}
+
+.cards--poker .card.rank-9.spades .suit:after {
+  content: "♠ ♠ ♠\a♠ ♠ ♠\a♠ ♠ ♠";
+}
+
+.cards--poker .card.rank-10.spades .suit:after {
+  content: "♠ ♠ ♠\a♠ ♠ ♠ ♠\a♠ ♠ ♠";
+}
+
+/* clubs */
+.cards--poker .card.clubs .rank:after {
+  content: " ♣";
+}
+
+.cards--poker .card.rank-A.clubs .suit:after {
+  content: "♣";
+}
+
+.cards--poker .card.rank-2.clubs .suit:after {
+  content: "♣\a\a♣";
+}
+
+.cards--poker .card.rank-3.clubs .suit:after {
+  content: "♣\a♣\a♣";
+}
+
+.cards--poker .card.rank-4.clubs .suit:after {
+  content: "♣   ♣\a\a♣   ♣";
+}
+
+.cards--poker .card.rank-5.clubs .suit:after {
+  content: "♣   ♣\a♣\a♣   ♣";
+}
+
+.cards--poker .card.rank-6.clubs .suit:after {
+  content: "♣   ♣\a♣   ♣\a♣   ♣";
+}
+
+.cards--poker .card.rank-7.clubs .suit:after {
+  content: "♣  ♣\a♣ ♣ ♣\a♣  ♣";
+}
+
+.cards--poker .card.rank-8.clubs .suit:after {
+  content: "♣ ♣ ♣\a♣  ♣\a♣ ♣ ♣";
+}
+
+.cards--poker .card.rank-9.clubs .suit:after {
+  content: "♣ ♣ ♣\a♣ ♣ ♣\a♣ ♣ ♣";
+}
+
+.cards--poker .card.rank-10.clubs .suit:after {
+  content: "♣ ♣ ♣\a♣ ♣ ♣ ♣\a♣ ♣ ♣";
+}

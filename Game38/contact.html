@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact US</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./header-style.css">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <a href="index.html" class="logo"> HSPL </a>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">contact us</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="heading">Contact US</section>
+
+    <div class="content_container">
+      <section class="content">
+
+        <p>
+          Hi, Welcome to the Contact Us page of the HeaTRec Solutions. For any questions, comments or any other query,
+          you can get to us on mdzawedansari8084@gmail.com.
+        </p>
+
+
+      </section>
+    </div>
+  </div>
+</body>
+
+<script>
+
+
+
+  let navbar = document.querySelector('.navbar');
+
+  document.querySelector('#menu-btn').onclick = () => {
+    navbar.classList.toggle('active');
+
+  }
+
+  window.onscroll = () => {
+    navbar.classList.remove('active');
+  }
+
+  var swiper = new Swiper(".product-slider", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  var swiper = new Swiper(".review-slider", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+</html>

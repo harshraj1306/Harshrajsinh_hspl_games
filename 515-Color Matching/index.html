@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Matching Game</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> Color Matching </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+    <h2>Color Matching Game</h2>
+<p>Click on the screen to switch the colors</p>
+
+    <script src="main.js"></script>
+</body>
+</html>

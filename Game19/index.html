@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Find the Rainbow</title>
+</head>
+<body>
+  <header class="nav-link">
+
+    <a href="index.html" class="logo"> Find the Rainbow </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="howtoplay.html">How to play</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+<main class="game">
+    <div class="game__canvas">
+      <div class="box" id="play-box">
+        <div class="box__inner">
+          <h1 class="box__headline">Find the rainbow</h1>
+          <p class="box__txt">Press (click/tap) the buttons until you find it!</p>
+          <button class="box__btn p-btn" id="play-btn" type="button">Play now</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+        <div class="grid__cell">
+          <button class="grid__btn p-btn" type="button"> <span class="grid__btn__rainbow"></span></button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+
+
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    
+    </script>	
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>A Matter Of Gravity</title>
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="logo">A Matter Of Gravity</div>
+
+        <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <div class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="howtoplay.html">How To Play</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        </div>
+        </ul>
+   </nav>
+    <!-- arrow describing a clockwise rotation -->
+<svg style="display: none;" viewBox="0 0 100 100" width="200" height="200">
+    <g id="arrow-right" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(50 50) rotate(-45)">
+            <path fill="none" d="M 0 -30 a 30 30 0 0 1 0 60"></path>
+            <path fill="currentColor" transform="translate(-20 30) rotate(90)" d="M 0 0 l -14 -14 h 28 z"></path>
+        </g>
+    </g>
+</svg>
+
+<!-- include a container with two buttons, to rotate the canvas clockwise and counter-clockwise -->
+<div class="controls">
+    <button data-direction="left">
+        <span>Left</span>
+        <!-- use the same arrow, but flip the use element around the y axis to describe a counter-clockwise rotation -->
+        <svg viewBox="0 0 100 100" width="80" height="80">
+            <g transform="translate(50 50) scale(-1 1)">
+                <g transform="translate(-50 -50)">
+                    <use href="#arrow-right"></use>
+                </g>
+            </g>
+        </svg>
+    </button>
+
+    <h2>Rotate</h2>
+
+    <button data-direction="right">
+        <span>Right</span>
+        <svg viewBox="0 0 100 100" width="80" height="80">
+            <use href="#arrow-right"></use>
+        </svg>
+    </button>
+</div>
+    <script src="https://unpkg.com/matter-js@0.14.2/build/matter.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

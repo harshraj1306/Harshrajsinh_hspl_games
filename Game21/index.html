@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:800|Quicksand:700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>HIT THE DIAMOND</title>
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="logo">HIT THE DIAMOND</div>
+
+        <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <div class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li class="services">
+            <a href="/">Help</a>
+
+            <ul class="dropdown">
+                <li><a href="/">How To Play</a></li>
+                <li><a href="/">Source</a></li>
+            </ul>
+            </li>
+            <li><a href="/">Disclaimer</a></li>
+        </div>
+        </ul>
+   </nav>
+        <div class="bg"></div> <!-- Empty div containing background image -->
+        <main class="container">
+          <header>
+            <!-- Blue box for displaying the current round & play/replay button -->
+            <div class="controls">
+              <h3>ROUND</h3>
+              <div id="rounds" class="option"><i id="round">0</i> <span>/20</span></div>
+              <div id="replay" class="option playMe">
+                <i id="playIcon">&#9658;</i> <span id="playMsg">PLAY?</span>
+              </div> 
+            </div>
+            
+            <h1 id="gameTitle">HIT THE <br> DIAMOND</h1> <!-- Game title -->
+            
+           <!-- Blue box for displaying the game modes (Strict & forgiving) -->
+            <div class="controls">
+              <h3>MODE</h3>
+              <div id="strict" class="option">
+                <i>&diams;</i> <span>STRICT</span>
+              </div>
+              <div id="forgiving" class="option active">
+                <i>&starf;</i> <span>FORGIVING</span>
+              </div>
+            </div>
+            
+          </header>
+          
+          <div class="wrapper">
+            <h1 id="winMessage">YOU<br>WIN</h1>
+            
+            <div id="diamond_container">
+              <div id="diamonds">
+                <div id="white-diamond"  class="diamond">
+                  <div class="cover"></div>
+                </div>
+                <div id="yellow-diamond" class="diamond">
+                  <div class="cover"></div>
+                </div>
+                <div id="blue-diamond"   class="diamond">
+                  <div class="cover"></div>
+                </div>
+                <div id="pink-diamond"   class="diamond">
+                  <div class="cover"></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <a id="info">
+            <h3>More<br>Info</h3>
+          </a>
+        </main>
+            <footer id="footer"> 
+            <div><h1>Game &amp; Rules</h1>
+              <p>Press play to begin!  Until you do so the game functions like a 4 note instrument. </p> The rules are exactly the same as the classic Simon game. <br> But in case you've never played Simon here are the rules: 
+            <ul>
+              <li>You are presented with a sequence of button presses (The diamonds light up and make a sound).  The length of the sequence is the same as the current round you're on.</li>
+              <li>After the sequence is done playing, you press the diamonds ( or use arrow or WASD keys) in the same pattern that just played.</li>
+              <li>If you enter the entire current sequence correctly, the round will increase. The pattern will play again, adding one more button press at the end of the sequence. The game continues like this until round 20.</li>
+              <li>If you enter the sequence incorrectly, a sound will play letting you know you made a mistake. If the mode is set to 'forgiving' (the default) the pattern will play again, and you can try again.  If the mode is 'strict' the pattern will reset and you'll have to start all over from round 1.</li>
+              <li>If you beat round 20, you'll win the game! You'll be notified of your victory and the game will start over.</li>
+            </ul>
+            </p>
+              </div><div>
+            <h1>Credit &amp; Inspiration</h1>
+            <p>Made for freeCodeCamp's <a target="_blank" href="https://www.freecodecamp.com/challenges/build-a-simon-game">'Build a Simon Game' Challenge</a>.<p>
+            <p>The look and feel of this Simon clone was inspired by Rebecca Sugar's <a href="https://en.wikipedia.org/wiki/Steven_Universe" target="_blank">Steven Universe</a>.<p> <p>This pen uses the Web Audio API for its sounds. The Sound class used is based on code from Greg Hovanesyan's <a target="_blank" href="https://codepen.io/gregh/pen/RKVNgB">pen.</a>  </p>
+        <h1>Special Thanks!</h1>
+        <p>I want to say thank you to the CodePen team for picking this pen!  I was floored when I saw my pen on the front page! &lt;3 </p>
+        </div>
+          </footer>
+      
+    <script src="main.js"></script>
+</body>
+</html>

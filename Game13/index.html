@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego plane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"> Lego plane </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+<script src="https://threejs.org//examples/js/renderers/Projector.js"></script>
+<script src="https://cdn.rawgit.com/schteppe/cannon.js/master/build/cannon.js"></script>
+<script src="https://baronwatts.com/scripts/LegacyJSONLoader.js"></script>
+<script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js"></script>
+
+<div class="container">
+  <div class="play-btn"></div>
+</div>
+
+<section>
+  <h1><span class="low">Lego</span> Plane</h1>
+<small>Knock down all the colored blocks by clicking or tapping your screen<small>
+</section>
+<script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+<script src="main.js"></script>
+</body>
+</html>

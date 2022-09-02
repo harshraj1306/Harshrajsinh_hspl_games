@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">    
+    <title>Racing</title>
+</head>
+<body style=margin:0;overflow:hidden>
+    <header class="nav-link">
+
+        <a href="index.html" class="logo"> Racing </a>
+    
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <canvas id=c>
+        <script>
+
+
+            let navbar = document.querySelector('.navbar');
+            
+            document.querySelector('#menu-btn').onclick = () =>{
+                navbar.classList.toggle('active');
+            
+            }
+            
+            window.onscroll = () =>{
+                navbar.classList.remove('active');
+            }
+            
+            </script>	
+<script src="main.js"></script>
+</body>
+</html>

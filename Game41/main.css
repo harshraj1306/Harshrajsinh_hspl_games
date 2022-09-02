@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background: #000;
+  }
+  
+  /*vars*/
+  :root {
+    --blocksize:20vw;
+    --boardsize:60vw;
+    --spacing:45vw;
+    --winmsgsize:8vw;
+  }
+  
+  @media (min-width: 750px) {
+    :root {
+      --blocksize:150px;
+      --boardsize:450px;
+      --spacing:400px;
+      --winmsgsize:3rem;
+    }
+  }
+  /*board*/
+  .board-wrapper {
+    overflow: hidden;
+    margin: 3rem 0 0 calc( 50vw - var(--boardsize) / 2 );
+    width: var(--boardsize);
+    margin-top: 100px;
+  }
+  
+  .board-outer {
+    width: 100vw;
+  }
+  
+  .board-inner {
+    width: var(--boardsize);
+    height: var(--boardsize);
+  }
+  
+  .board {
+    float: left;
+    position: relative;
+  }
+  .board:before {
+    position: absolute;
+    left: -999px;
+    content: counter(player);
+  }
+  .board:after {
+    content: counter(player, lower-roman);
+    display: inline-block;
+    height: 0;
+    background: grey;
+    font-family: monospace;
+    letter-spacing: var(--spacing);
+    overflow: hidden;
+  }
+  
+  /*input radio*/
+  .board input {
+    position: absolute;
+    width: var(--blocksize);
+    height: var(--blocksize);
+    cursor: pointer;
+    opacity: 0;
+    -webkit-appearance: none;
+  }
+  .board input:indeterminate {
+    display: block;
+  }
+  .board input:checked, .board input:checked + input {
+    display: none;
+  }
+  .board input.blue {
+    background: #5039ff;
+  }
+  .board input.red {
+    background: #c50878;
+    left: auto !important;
+  }
+  .board input[name=pos11] {
+    top: 0;
+    left: 0;
+  }
+  .board input[name=pos11] + input {
+    right: calc( 2 * var(--blocksize) );
+  }
+  .board input[name=pos12] {
+    top: 0;
+    left: var(--blocksize);
+  }
+  .board input[name=pos12] + input {
+    right: var(--blocksize);
+  }
+  .board input[name=pos13] {
+    top: 0;
+    left: calc( 2 * var(--blocksize) );
+  }
+  .board input[name=pos13] + input {
+    right: 0;
+  }
+  .board input[name=pos21] {
+    top: var(--blocksize);
+    left: 0;
+  }
+  .board input[name=pos21] + input {
+    right: calc( 2 * var(--blocksize) );
+  }
+  .board input[name=pos22] {
+    top: var(--blocksize);
+    left: var(--blocksize);
+  }
+  .board input[name=pos22] + input {
+    right: var(--blocksize);
+  }
+  .board input[name=pos23] {
+    top: var(--blocksize);
+    left: calc( 2 * var(--blocksize) );
+  }
+  .board input[name=pos23] + input {
+    right: 0;
+  }
+  .board input[name=pos31] {
+    top: calc( 2 * var(--blocksize) );
+    left: 0;
+  }
+  .board input[name=pos31] + input {
+    right: calc( 2 * var(--blocksize) );
+  }
+  .board input[name=pos32] {
+    top: calc( 2 * var(--blocksize) );
+    left: var(--blocksize);
+  }
+  .board input[name=pos32] + input {
+    right: var(--blocksize);
+  }
+  .board input[name=pos33] {
+    top: calc( 2 * var(--blocksize) );
+    left: calc( 2 * var(--blocksize) );
+  }
+  .board input[name=pos33] + input {
+    right: 0;
+  }
+  
+  /*marque*/
+  .marque {
+    float: left;
+    display: flex;
+    padding: 1px;
+    width: var(--blocksize);
+    height: var(--blocksize);
+    justify-content: center;
+    align-items: center;
+    background: #1d1d1d;
+    background-clip: content-box;
+  }
+  .marque:before {
+    content: "";
+    position: static;
+    display: block;
+    width: 50%;
+    height: 50%;
+  }
+  
+  /* marque hover*/
+  .blue:hover + .red + .marque:before {
+    background: rgba(80, 57, 255, 0.3);
+    border-radius: 3px;
+  }
+  
+  .blue + .red:hover + .marque:before {
+    background: rgba(197, 9, 120, 0.3);
+    border-radius: 50%;
+  }
+  
+  /* marque checked*/
+  .blue:checked + .red + .marque {
+    counter-increment: player 2;
+    position: relative;
+    z-index: 100;
+  }
+  .blue:checked + .red + .marque:before {
+    background: #5039ff;
+    border-radius: 3px;
+  }
+  
+  .blue + .red:checked + .marque {
+    counter-increment: player -2;
+    position: relative;
+    z-index: 100;
+  }
+  .blue + .red:checked + .marque:before {
+    background: #c50878;
+    border-radius: 50%;
+  }
+  
+  /* results */
+  .win-message {
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    color: #FFF;
+    font-size: var(--winmsgsize);
+    font-weight: bold;
+    z-index: 200;
+  }
+  .win-message .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--boardsize);
+    height: var(--boardsize);
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  /*blue wins*/
+  #pos11-blue:checked ~ #pos12-blue:checked ~ #pos13-blue:checked ~ #win-blue,
+  #pos21-blue:checked ~ #pos22-blue:checked ~ #pos23-blue:checked ~ #win-blue,
+  #pos31-blue:checked ~ #pos32-blue:checked ~ #pos33-blue:checked ~ #win-blue,
+  #pos11-blue:checked ~ #pos21-blue:checked ~ #pos31-blue:checked ~ #win-blue,
+  #pos12-blue:checked ~ #pos22-blue:checked ~ #pos32-blue:checked ~ #win-blue,
+  #pos13-blue:checked ~ #pos23-blue:checked ~ #pos33-blue:checked ~ #win-blue,
+  #pos11-blue:checked ~ #pos22-blue:checked ~ #pos33-blue:checked ~ #win-blue,
+  #pos13-blue:checked ~ #pos22-blue:checked ~ #pos31-blue:checked ~ #win-blue {
+    display: block;
+  }
+  #pos11-blue:checked ~ #pos12-blue:checked ~ #pos13-blue:checked ~ #win-blue ~ #no-winner,
+  #pos21-blue:checked ~ #pos22-blue:checked ~ #pos23-blue:checked ~ #win-blue ~ #no-winner,
+  #pos31-blue:checked ~ #pos32-blue:checked ~ #pos33-blue:checked ~ #win-blue ~ #no-winner,
+  #pos11-blue:checked ~ #pos21-blue:checked ~ #pos31-blue:checked ~ #win-blue ~ #no-winner,
+  #pos12-blue:checked ~ #pos22-blue:checked ~ #pos32-blue:checked ~ #win-blue ~ #no-winner,
+  #pos13-blue:checked ~ #pos23-blue:checked ~ #pos33-blue:checked ~ #win-blue ~ #no-winner,
+  #pos11-blue:checked ~ #pos22-blue:checked ~ #pos33-blue:checked ~ #win-blue ~ #no-winner,
+  #pos13-blue:checked ~ #pos22-blue:checked ~ #pos31-blue:checked ~ #win-blue ~ #no-winner {
+    display: none;
+  }
+  
+  /*red wins*/
+  #pos11-red:checked ~ #pos12-red:checked ~ #pos13-red:checked ~ #win-red,
+  #pos21-red:checked ~ #pos22-red:checked ~ #pos23-red:checked ~ #win-red,
+  #pos31-red:checked ~ #pos32-red:checked ~ #pos33-red:checked ~ #win-red,
+  #pos11-red:checked ~ #pos21-red:checked ~ #pos31-red:checked ~ #win-red,
+  #pos12-red:checked ~ #pos22-red:checked ~ #pos32-red:checked ~ #win-red,
+  #pos13-red:checked ~ #pos23-red:checked ~ #pos33-red:checked ~ #win-red,
+  #pos11-red:checked ~ #pos22-red:checked ~ #pos33-red:checked ~ #win-red,
+  #pos13-red:checked ~ #pos22-red:checked ~ #pos31-red:checked ~ #win-red {
+    display: block;
+  }
+  #pos11-red:checked ~ #pos12-red:checked ~ #pos13-red:checked ~ #win-red ~ #no-winner,
+  #pos21-red:checked ~ #pos22-red:checked ~ #pos23-red:checked ~ #win-red ~ #no-winner,
+  #pos31-red:checked ~ #pos32-red:checked ~ #pos33-red:checked ~ #win-red ~ #no-winner,
+  #pos11-red:checked ~ #pos21-red:checked ~ #pos31-red:checked ~ #win-red ~ #no-winner,
+  #pos12-red:checked ~ #pos22-red:checked ~ #pos32-red:checked ~ #win-red ~ #no-winner,
+  #pos13-red:checked ~ #pos23-red:checked ~ #pos33-red:checked ~ #win-red ~ #no-winner,
+  #pos11-red:checked ~ #pos22-red:checked ~ #pos33-red:checked ~ #win-red ~ #no-winner,
+  #pos13-red:checked ~ #pos22-red:checked ~ #pos31-red:checked ~ #win-red ~ #no-winner {
+    display: none;
+  }
+  
+  /**/
+  form:valid #no-winner {
+    display: block;
+  }
+  
+  /* reset */
+  .actions {
+    clear: both;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .actions button {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border: 1px solid #1d1d1d;
+    color: #555;
+    background: #000;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease-out, border 0.3s ease-out;
+  }
+  .actions button:hover {
+    border-color: #303030;
+    background: #0a0a0a;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/canvasplay/game-cards/9597af19/dist/game-cards.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="header" style="height: 70px;">
+    <a href="index.html" class="logo"> HSPL </a>
+    <nav class="navbar" style="top: 25px;">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">contact us</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+    <div class="background"></div>
+<div class="cards cards--debug">
+
+  <div class="card" data-name="card" onclick="toggleCardClass(this,'debug3D')">
+    <div class="turner" data-name="turner">
+    <div class="flipper" data-name="flipper">
+      <div class="back" data-name="back">
+        <strong data-value="B">B</strong>
+      </div>
+      <div class="face" data-name="face">
+        <strong data-value="A">A</strong>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+    
+<form>
+
+  <div class="form-group">
+  <label>debug</label> 
+  <div class="btn-group">
+    <label>
+      <input type="checkbox" name="3d" checked>
+      <i class="material-icons"></i>
+      <span>3D view</span>
+    </label>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <label>flipper</label> 
+  <div class="btn-group">
+    <label>
+      <input type="checkbox" name="flip">
+      <i class="material-icons"></i>
+      <span>flip</span>
+    </label>
+    <label>
+      <input type="checkbox" name="spin">
+      <i class="material-icons"></i>
+      <span>spin</span>
+    </label>
+  </div>
+  </div>  
+
+  <div class="form-group">
+
+  <label>turner</label> 
+
+
+  <div class="btn-group">
+
+    <label>
+      <input type="radio" name="turn" value="default" checked>
+      <i class="material-icons"></i>
+      <span>0</span>
+    </label>
+
+    <label>
+      <input type="radio" name="turn" value="90">
+      <i class="material-icons"></i>
+      <span>90</span>
+    </label>
+
+    <label>
+      <input type="radio" name="turn" value="180">
+      <i class="material-icons"></i>
+      <span>180</span>
+    </label>
+
+    <label>
+      <input type="radio" name="turn" value="270">
+      <i class="material-icons"></i>
+      <span>270</span>
+    </label>
+
+  </div>
+
+  <div class="btn-group">
+    <label>
+      <input type="checkbox" name="twist">
+      <i class="material-icons"></i>
+      <span>twist</span>
+    </label>
+  </div>
+
+  </div>
+ 
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+<script src="main.js"></script>
+</body>
+
+<script>
+        
+    
+    
+  let navbar = document.querySelector('.navbar');
+  
+  document.querySelector('#menu-btn').onclick = () =>{
+      navbar.classList.toggle('active');
+  
+  }
+  
+  window.onscroll = () =>{
+      navbar.classList.remove('active');
+  }
+  
+  var swiper = new Swiper(".product-slider", {
+      loop:true,
+      spaceBetween: 20,
+      autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+  });
+  
+  var swiper = new Swiper(".review-slider", {
+      loop:true,
+      spaceBetween: 20,
+      autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+  });
+  </script>
+  
+</html>

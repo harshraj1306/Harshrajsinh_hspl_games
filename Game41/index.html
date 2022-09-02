@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tictactoe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> HSPL </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+    <form>
+        <div class="board-wrapper">
+          <div class="board-outer">
+            <div class="board">
+              <div class="board-inner">
+                <input type="radio" name="pos11" id="pos11-blue" class="blue" required>
+                <input type="radio" name="pos11" id="pos11-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos12" id="pos12-blue" class="blue" required>
+                <input type="radio" name="pos12" id="pos12-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos13" id="pos13-blue" class="blue" required>
+                <input type="radio" name="pos13" id="pos13-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos21" id="pos21-blue" class="blue" required>
+                <input type="radio" name="pos21" id="pos21-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos22" id="pos22-blue" class="blue" required>
+                <input type="radio" name="pos22" id="pos22-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos23" id="pos23-blue" class="blue" required>
+                <input type="radio" name="pos23" id="pos23-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos31" id="pos31-blue" class="blue" required>
+                <input type="radio" name="pos31" id="pos31-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos32" id="pos32-blue" class="blue" required>
+                <input type="radio" name="pos32" id="pos32-red" class="red" required>
+                <div class="marque"></div>
+      
+                <input type="radio" name="pos33" id="pos33-blue" class="blue" required>
+                <input type="radio" name="pos33" id="pos33-red" class="red" required>
+                <div class="marque"></div>
+      
+                <div id="win-blue" class="win-message"><div class="wrapper">Blue wins!</div></div>
+                <div id="win-red" class="win-message"><div class="wrapper">Red wins!</div></div>
+                <div id="no-winner" class="win-message"><div class="wrapper">It's a draw!</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="reset">Restart</button>
+        </div>
+      </form>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/canvasplay/game-cards/master/dist/game-cards.css">
+    <link rel="stylesheet" href="main.css">
+    <title>UNO</title>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"> HSPL </a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">contact us</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+    <script>
+        
+    
+    
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    
+    var swiper = new Swiper(".product-slider", {
+        loop:true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1020: {
+            slidesPerView: 3,
+          },
+        },
+    });
+    
+    var swiper = new Swiper(".review-slider", {
+        loop:true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1020: {
+            slidesPerView: 3,
+          },
+        },
+    });
+    </script>
+<div class="game-cards uno">
+    <div class="cards cards--fan">
+      <div class="card flip red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>1</span></div>
+            <div class="value"><span>1</span></div>
+            <div class="value value-down"><span>1</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>2</span></div>
+            <div class="value"><span>2</span></div>
+            <div class="value value-down"><span>2</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>3</span></div>
+            <div class="value"><span>3</span></div>
+            <div class="value value-down"><span>3</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>4</span></div>
+            <div class="value"><span>4</span></div>
+            <div class="value value-down"><span>4</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>5</span></div>
+            <div class="value"><span>5</span></div>
+            <div class="value value-down"><span>5</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>6</span></div>
+            <div class="value"><span>6</span></div>
+            <div class="value value-down"><span>6</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>7</span></div>
+            <div class="value"><span>7</span></div>
+            <div class="value value-down"><span>7</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>8</span></div>
+            <div class="value"><span>8</span></div>
+            <div class="value value-down"><span>8</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip red">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>9</span></div>
+            <div class="value"><span>9</span></div>
+            <div class="value value-down"><span>9</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+    </div><br/>
+    <div class="cards cards--fan">
+      <div class="card  yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>1</span></div>
+            <div class="value"><span>1</span></div>
+            <div class="value value-down"><span>1</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>2</span></div>
+            <div class="value"><span>2</span></div>
+            <div class="value value-down"><span>2</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>3</span></div>
+            <div class="value"><span>3</span></div>
+            <div class="value value-down"><span>3</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>4</span></div>
+            <div class="value"><span>4</span></div>
+            <div class="value value-down"><span>4</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>5</span></div>
+            <div class="value"><span>5</span></div>
+            <div class="value value-down"><span>5</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>6</span></div>
+            <div class="value"><span>6</span></div>
+            <div class="value value-down"><span>6</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>7</span></div>
+            <div class="value"><span>7</span></div>
+            <div class="value value-down"><span>7</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>8</span></div>
+            <div class="value"><span>8</span></div>
+            <div class="value value-down"><span>8</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  yellow">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>9</span></div>
+            <div class="value"><span>9</span></div>
+            <div class="value value-down"><span>9</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+    </div><br/>
+    <div class="cards cards--fan">
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>1</span></div>
+            <div class="value"><span>1</span></div>
+            <div class="value value-down"><span>1</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>2</span></div>
+            <div class="value"><span>2</span></div>
+            <div class="value value-down"><span>2</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>3</span></div>
+            <div class="value"><span>3</span></div>
+            <div class="value value-down"><span>3</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>4</span></div>
+            <div class="value"><span>4</span></div>
+            <div class="value value-down"><span>4</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>5</span></div>
+            <div class="value"><span>5</span></div>
+            <div class="value value-down"><span>5</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>6</span></div>
+            <div class="value"><span>6</span></div>
+            <div class="value value-down"><span>6</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>7</span></div>
+            <div class="value"><span>7</span></div>
+            <div class="value value-down"><span>7</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>8</span></div>
+            <div class="value"><span>8</span></div>
+            <div class="value value-down"><span>8</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  green">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>9</span></div>
+            <div class="value"><span>9</span></div>
+            <div class="value value-down"><span>9</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+    </div><br/>
+    <div class="cards cards--fan">
+      <div class="card  blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>1</span></div>
+            <div class="value"><span>1</span></div>
+            <div class="value value-down"><span>1</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>2</span></div>
+            <div class="value"><span>2</span></div>
+            <div class="value value-down"><span>2</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>3</span></div>
+            <div class="value"><span>3</span></div>
+            <div class="value value-down"><span>3</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>4</span></div>
+            <div class="value"><span>4</span></div>
+            <div class="value value-down"><span>4</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>5</span></div>
+            <div class="value"><span>5</span></div>
+            <div class="value value-down"><span>5</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card  blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>6</span></div>
+            <div class="value"><span>6</span></div>
+            <div class="value value-down"><span>6</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>7</span></div>
+            <div class="value"><span>7</span></div>
+            <div class="value value-down"><span>7</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>8</span></div>
+            <div class="value"><span>8</span></div>
+            <div class="value value-down"><span>8</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+      <div class="card flip blue">
+        <div class="flipper">
+          <div class="face">
+            <div class="value value-up"><span>9</span></div>
+            <div class="value"><span>9</span></div>
+            <div class="value value-down"><span>9</span></div>
+          </div>
+          <div class="back"><span><span>UNO</span></span></div>
+        </div>
+      </div>
+    </div><br/>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/conic-gradient.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

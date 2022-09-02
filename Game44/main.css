@@ -1,0 +1,303 @@
+/* Simon Game CSS
+ * Date: 18 / 02 / 2017 
+ * Author: Jack Lyons
+ * Project: Simon Says 
+ * Certificate: Free Code Camp Front End Web Development
+ */
+
+
+/* Table of contents -- To be revised...
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+1. Buttons
+2. Animations
+3. Elements
+  3.1 - Containers
+  3.2 - Header
+  3.3 - Footer
+  3.4 - Typography
+4. Media Queries
+5. Spacing
+6. General Overwrites
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+body {
+    background: url('https://source.unsplash.com/random') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .mui-container,
+  .game-container {
+    max-width: 800px !important;
+  }
+  
+  /* 1. Buttons
+  ---------------- */
+  
+  
+  /* Config buttons */
+  
+  .config-buttons .mui-btn {
+    width: 90%;
+  }
+  
+  
+  /* Simon game buttons */
+  
+  .simon-btn.mui-btn {
+    height: 150px;
+    width: 100%;
+  }
+  
+  .simon-btn.mui-btn--blue,
+  .simon-btn.mui-btn--blue:hover,
+  .simon-btn.mui-btn--blue:focus {
+    background-color: steelblue;
+  }
+  
+  .simon-btn.mui-btn--green,
+  .simon-btn.mui-btn--green:hover,
+  .simon-btn.mui-btn--green:focus {
+    background-color: greenyellow;
+  }
+  
+  .simon-btn.mui-btn--red,
+  .simon-btn.mui-btn--red:hover,
+  .simon-btn.mui-btn--red:focus {
+    background-color: orangered;
+  }
+  
+  .simon-btn.mui-btn--yellow,
+  .simon-btn.mui-btn--yellow:hover,
+  .simon-btn.mui-btn--yellow:focus {
+    background-color: gold;
+  }
+  
+  .simon-btn.mui-btn:active,
+  .simon-btn.mui-btn:hover {
+    background-color: white;
+    opacity: .7;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .js-click {
+    background-color: black !important;
+    opacity: .7;
+  }
+  
+  .selected {
+    background: lawngreen;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  
+  /* 2. Animations
+  ------------------- */
+  
+  
+  /* 3. Elements
+  ------------------ */
+  
+  
+  /* 3.1 Container
+  ---------------- */
+  
+  .mui-panel.game-container,
+  .mui-panel.game-settings {
+    background: #ededed;
+  }
+  
+  .mui-panel.game-container {
+    margin: 50px auto;
+    margin-top: 100px;
+  }
+  
+  
+  /* 3.2 Header
+  ---------------- */
+  
+  h1.page-title {
+    margin-top: 10px;
+  }
+  
+  
+  /* 3.3 Footer
+  ---------------- */
+  
+  footer {
+    background-color: #ededed;
+    border-top: 1px solid #e0e0e0;
+    padding: 20px;
+  }
+  
+  
+  /* 4. Media Queries
+  ---------------------- */
+  
+  /* Flexi header on tablets and above */
+  @media screen and (min-width: 767px) {
+    .flex-center-align {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  @media screen and (max-width: 544px) {
+    .mui-col-sm-3 {
+      text-align: center;
+    }
+    button {
+      width: 90%;
+    }
+  }
+  
+  
+  
+  /* 5. Spacing
+  ---------------------- */
+  
+  
+  /* 6. General Overwrites
+  -------------------------- */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}

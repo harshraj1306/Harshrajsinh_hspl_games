@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Bowling</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"> Bowling </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+       <script src="https://baronwatts.com/scripts/LegacyJSONLoader.js"></script>
+       <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://threejs.org/examples/js/controls/DeviceOrientationControls.js"></script>
+    <script src="https://threejs.org/examples/js/effects/StereoEffect.js"></script>
+    <script src="https://threejs.org//examples/js/renderers/Projector.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+        <!-- processing -->
+    <script type="text/javascript" src="https://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
+    <script type="text/javascript" src="https://threejs.org/examples/js/postprocessing/ShaderPass.js"></script>
+    <script type="text/javascript" src="https://threejs.org/examples/js/postprocessing/RenderPass.js"></script>
+    <script type="text/javascript" src="https://threejs.org/examples/js/postprocessing/MaskPass.js"></script>
+    <!-- shaders -->
+    <script type="text/javascript" src="https://threejs.org/examples/js/shaders/CopyShader.js"></script>
+    <script type="text/javascript" src="https://threejs.org/examples/js/shaders/HorizontalTiltShiftShader.js"></script>
+
+    <script src="https://cdn.rawgit.com/schteppe/cannon.js/master/build/cannon.js"></script>
+
+<p>double click to shoot</p>
+<script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+<script src="main.js"></script>
+</body>
+</html>

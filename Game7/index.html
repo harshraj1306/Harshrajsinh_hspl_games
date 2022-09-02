@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Master JS pool</title>
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="logo">Master JS pool</div>
+
+        <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <div class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="howtoplay.html">howtoplay</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        </div>
+        </ul>
+   </nav>
+    <!-- markup
+header introducing the game and score
+canvas, injected through the script -->
+<main>
+    <header>
+        <h1>
+            Play ball
+        </h1>
+
+        <h2>
+            Score:
+            <mark id="score">0</mark>
+        </h2>
+    </header>
+</main>
+<script src="https://unpkg.com/matter-js@0.14.2/build/matter.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

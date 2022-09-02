@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy:400,700");
+body {
+  background: #BBB;
+  text-align: center;
+  padding: 4em;
+  font-size: 1.2em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    top: 120%;
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+.card {
+  cursor: pointer;
+  font-size: 3em;
+}
+
+.game-cards.uno {
+  font-family: "Luckiest Guy", sans-serif;
+}
+.game-cards.uno .card .face {
+  color: #FFF;
+  background: #000;
+  line-height: 1;
+  position: relative;
+}
+.game-cards.uno .card .face:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.07em solid;
+  border-radius: 0.11em;
+  content: "";
+}
+.game-cards.uno .card .face .value {
+  background: #FFF;
+  position: absolute;
+  border-radius: 100%;
+  width: 1.24em;
+  height: 1.24em;
+  color: #000;
+  font-size: 0.7em;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.62em;
+  margin-left: -0.62em;
+  text-align: center;
+  transform: skewX(-15deg);
+}
+.game-cards.uno .card .face .value span {
+  display: inline-block;
+  transform: skewX(15deg);
+  line-height: 1.5;
+}
+.game-cards.uno .card .face .value-up {
+  font-size: 0.2em;
+  top: 1.2em;
+  left: 1.2em;
+}
+.game-cards.uno .card .face .value-down {
+  font-size: 0.2em;
+  top: auto;
+  left: auto;
+  bottom: 0.6em;
+  right: 0.6em;
+}
+.game-cards.uno .card .back {
+  color: #FFF;
+  background: #000;
+  background: repeating-conic-gradient(#000 0 11deg, #222 0 21deg);
+  line-height: 1;
+}
+.game-cards.uno .card .back:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.07em solid;
+  border-radius: 0.11em;
+  content: "";
+}
+.game-cards.uno .card .back > span {
+  background: #FFF;
+  display: inline-block;
+  border-radius: 100%;
+  width: 1.24em;
+  height: 1.24em;
+  color: #000;
+  line-height: 1.4;
+  font-size: 0.6em;
+  position: relative;
+  top: 15%;
+  transform: skewX(-15deg);
+}
+.game-cards.uno .card .back > span > span {
+  display: inline-block;
+  transform: translateY(-25%) skewX(15deg);
+  font-size: 0.5em;
+}
+.game-cards.uno .card.red .face {
+  background: #ff0039;
+}
+.game-cards.uno .card.red .face .value {
+  color: #ff0039;
+}
+.game-cards.uno .card.green .face {
+  background: #089600;
+}
+.game-cards.uno .card.green .face .value {
+  color: #089600;
+}
+.game-cards.uno .card.blue .face {
+  background: #0041ff;
+}
+.game-cards.uno .card.blue .face .value {
+  color: #0041ff;
+}
+.game-cards.uno .card.yellow .face {
+  background: #ffb600;
+}
+.game-cards.uno .card.yellow .face .value {
+  color: #ffb600;
+}

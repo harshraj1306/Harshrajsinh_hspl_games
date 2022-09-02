@@ -1,0 +1,295 @@
+@charset "UTF-8";
+body {
+  background: #535c61;
+  color: #00BCD4;
+  text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    top: 20%;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+.cards {
+  position: relative;
+  height: 30rem;
+  border: 1em solid #00BCD4;
+  margin: 10em 0;
+}
+
+.cards .card {
+  cursor: pointer;
+  font-size: 4em;
+}
+
+.cards .card .face strong,
+.cards .card .back strong {
+  color: #333333;
+}
+
+.cards .card .face strong:before,
+.cards .card .face strong:after {
+  content: attr(data-value);
+  position: absolute;
+  font-size: 0.3em;
+  display: block;
+  line-height: 1;
+  padding: 0.25em;
+}
+
+.cards .card .face strong:before {
+  top: 0;
+  left: 0;
+}
+
+.cards .card .face strong:after {
+  bottom: 0;
+  right: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: inline-block;
+  text-align: left;
+  border: 1px solid rgba(0, 188, 212, 0.2);
+  padding: 1em 1.5em;
+  border-radius: 0.25em;
+}
+
+.form-group > label {
+  display: block;
+}
+
+.buttons {
+  position: relative;
+}
+
+input:focus,
+label:focus,
+label.active.focus,
+label:active:focus,
+textarea:focus,
+button:focus, .btn:focus,
+button.active:focus, .btn.active:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+label {
+  display: inline-block;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+label > input,
+label > i,
+label > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+label > input[type=checkbox],
+label > input[type=radio] {
+  width: 0;
+  visibility: hidden;
+}
+
+/*
+input[type="checkbox"] + i.material-icons:before{
+  content: 'check_box_outline_blank';
+}
+input[type="checkbox"]:checked + i.material-icons:before{
+  content: 'check_box';
+}
+
+input[type="radio"] + i.material-icons:before{
+  content: 'radio_button_unchecked';
+}
+input[type="radio"]:checked + i.material-icons:before{
+  content: 'radio_button_checked';
+}
+*/
+/* IE9 compatibility */
+input[type=checkbox] + i.material-icons:before {
+  content: "";
+}
+
+input[type=checkbox]:checked + i.material-icons:before {
+  content: "";
+}
+
+input[type=radio] + i.material-icons:before {
+  content: "";
+}
+
+input[type=radio]:checked + i.material-icons:before {
+  content: "";
+}
+
+.form-group a {
+  color: inherit;
+}
+
+.align-group label {
+  padding: 0;
+}
+
+/*
+.cards--deck:not(.cards--reverse){
+    .card{
+    margin-left: calc(-1em + 2px);
+    &:not(:first-child){
+      .face, .back{
+        box-shadow: -1px 0 1px rgba(0,0,0,.3);  
+      }      
+    }
+  }  
+}
+
+.cards--deck.cards--reverse{
+    .card{
+    margin-right: calc(-1em + 2px);
+    &:not(:last-child){
+      .face, .back{
+        box-shadow: 1px 0 1px rgba(0,0,0,.3);  
+      }      
+    }
+  }  
+}
+*/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star-tac-toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+</head>
+<body>
+    <header class="header">
+    <a href="#" class="logo">  </a>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="howtoplay.html">How to play</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+<script>
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+
+}
+
+window.onscroll = () =>{
+    navbar.classList.remove('active');
+}
+</script>
+    <div class="container" ng-app="StarWarsToe" ng-controller="swtController">
+        <div class="start-screen" ng-show="!started">
+          <a href class="start" ng-click="start('start-screen')">Start the battle</a>
+          
+        </div>
+        
+        <div class="choose-block" ng-show="started && !sideChosen">
+          <h1>Choose your side!</h1>
+          <h3>But choose wisely!</h3>
+          <div class="choose-block__links">
+            <a href class="choose-block__links__link obi"><img src="https://useful-info.github.io/sites/mamarada/images/obi.png"></a>
+            <a href class="choose-block__links__link darth"><img src="https://useful-info.github.io/sites/mamarada/images/darth.png"></a>
+          </div>
+        </div>
+        
+        <div class="board" ng-show="sideChosen">
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(0, 0, 0)" id="0"><img ng-src="{{sides[board[0][0]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(0, 1, 1)" id="1"><img ng-src="{{sides[board[0][1]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(0, 2, 2)" id="2"><img ng-src="{{sides[board[0][2]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(1, 0, 3)" id="3"><img ng-src="{{sides[board[1][0]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(1, 1, 4)" id="4"><img ng-src="{{sides[board[1][1]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(1, 2, 5)" id="5"><img ng-src="{{sides[board[1][2]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(2, 0, 6)" id="6"><img ng-src="{{sides[board[2][0]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(2, 1, 7)" id="7"><img ng-src="{{sides[board[2][1]]}}" alt="cell"></a></div>
+          <div class="board__cell"><a href class="board__cell__btn" ng-click="playTurn(2, 2, 8)" id="8"><img ng-src="{{sides[board[2][2]]}}" alt="cell"></a></div>
+        </div>
+        
+        <div class="result" ng-if="isWin || isDraw || isLose">
+          <h1 ng-if="isWin">You won!</h1>
+          <h1 ng-if="isDraw">Draw!</h1>
+          <h1 ng-if="isLose">You lost!</h1>
+          <a href class="replay" ng-click="replay('result')">Play again</a>
+          <a href class="change" ng-click="start('result')">Change side</a>
+        </div>
+        
+        
+      </div>
+      <script src="main.js"></script>
+</body>
+</html>

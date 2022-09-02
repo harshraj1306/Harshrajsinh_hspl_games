@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> HSPL </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Game</title>
+    </head>
+    <body>
+      <table>
+        <tr>
+          <td id="tdd1"><button onclick="hide(1)">1</button></td>
+          <td id="tdd2"><button onclick="hide(2)">2</button></td>
+          <td id="tdd3"><button onclick="hide(3)">3</button></td>
+        </tr>
+        <tr>
+          <td id="tdd4"><button onclick="hide(4)">4</button></td>
+          <td id="tdd5"><button onclick="hide(5)">5</button></td>
+          <td id="tdd6"><button onclick="hide(6)">6</button></td>
+        </tr>
+        <tr>
+          <td id="tdd7"><button onclick="hide(7)">7</button></td>
+          <td id="tdd8"><button onclick="hide(8)">8</button></td>
+          <td id="tdd9"><button onclick="hide(9)">9</button></td>
+        </tr>
+        <tr>
+          <td class="reset" colspan="3">
+            <button onclick="resett()">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </body>
+    </html>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    transition: all .3s linear;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-family: Georgia, sans-serif;
+    font-size: 44px;
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+    color: #444;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: cursive;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+   .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: teal;
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+  
+   .logo {
+    font-size: 32px;
+   }
+  
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   
+   
+input[type=checkbox]{
+    display: none;
+   }
+   
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   @media (max-width: 768px) {
+    .menu {
+     display:none;
+     position: absolute;
+     background-color:teal;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+    }
+ 
+    .menu li:hover {
+     display: inline-block;
+     background-color:#4c9e9e;
+     transition: 0.3s ease;
+    }
+    .menu li + li {
+     margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger {
+     display: block;
+    }
+    .dropdown {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+    }
+    .dropdown li:hover {
+     background-color: #4c9e9e;
+    }
+    }
+  .container {
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .container div {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background: goldenrod;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  :nth-child(1):focus {
+    outline: none;
+    background: url(https://placedog.net/151/151/);
+  }
+  
+  :nth-child(2):focus {
+    outline: none;
+    background: url(https://placedog.net/152/152/);
+  }
+  
+  :nth-child(3):focus {
+    outline: none;
+    background: url(https://placedog.net/153/153/);
+  }
+  
+  :nth-child(4):focus {
+    outline: none;
+    background: url(https://placedog.net/154/154/);
+  }
+  
+  :nth-child(5):focus {
+    outline: none;
+    background: url(https://placedog.net/155/155/);
+  }
+  
+  :nth-child(6):focus {
+    outline: none;
+    background: url(https://placedog.net/150/150/);
+  }
+  
+  :nth-child(7):focus {
+    outline: none;
+    background: url(https://placedog.net/156/156/);
+  }
+  
+  :nth-child(8):focus {
+    outline: none;
+    background: url(https://placedog.net/157/157/);
+  }
+  
+  :nth-child(9):focus {
+    outline: none;
+    background: url(https://placedog.net/158/158/);
+  }
+  
+  :nth-child(10):focus {
+    outline: none;
+    background: url(https://placedog.net/150/150/);
+  }
+  
+  :nth-child(11):focus {
+    outline: none;
+    background: url(https://placedog.net/159/159/);
+  }
+  
+  :nth-child(12):focus {
+    outline: none;
+    background: url(https://placekitten.com/g/150/150);
+  }
+  
+  :nth-child(13):focus {
+    outline: none;
+    background: url(https://placedog.net/160/160/);
+  }
+  
+  :nth-child(14):focus {
+    outline: none;
+    background: url(https://placedog.net/161/161/);
+  }
+  
+  :nth-child(15):focus {
+    outline: none;
+    background: url(https://placedog.net/162/162/);
+  }
+  
+  :nth-child(16):focus {
+    outline: none;
+    background: url(https://placedog.net/163/163/);
+  }
+  
+  :nth-child(17):focus {
+    outline: none;
+    background: url(https://placedog.net/164/164/);
+  }
+  
+  :nth-child(18):focus {
+    outline: none;
+    background: url(https://placedog.net/165/165/);
+  }
+  
+  :nth-child(19):focus {
+    outline: none;
+    background: url(https://placedog.net/166/166/);
+  }
+  
+  :nth-child(20):focus {
+    outline: none;
+    background: url(https://placedog.net/167/167/);
+  }
+  
+  :nth-child(21):focus {
+    outline: none;
+    background: url(https://placedog.net/168/168/);
+  }
+  
+  :nth-child(22):focus {
+    outline: none;
+    background: url(https://placedog.net/169/169/);
+  }
+  
+  :nth-child(23):focus {
+    outline: none;
+    background: url(https://placedog.net/170/170/);
+  }
+  
+  :nth-child(24):focus {
+    outline: none;
+    background: url(https://placedog.net/171/171/);
+  }

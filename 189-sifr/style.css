@@ -1,0 +1,1046 @@
+/* BLACKOUT FONT */
+
+@font-face {
+    font-family: 'Blackout Midnight';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/159921/blackout_midnight-webfont.eot?') format('eot'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/159921/blackout_midnight-webfont.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/159921/blackout_midnight-webfont.ttf') format('truetype');
+  }
+  
+  /*DARK THEME */
+  /* BLUE RGB(37,114,235)
+  /* ORANGE RGB(255,152,29)
+  /* GREEN RGB(145,209,0)
+  /* RED 	RGB(255,46,18)
+  
+  /* PURPLE RGB(105,27,184)
+  /* DARK BLUE RGB(0,106,193)
+  /* YELLOW RGB(243,178,0)
+  /* PINK	RGB(255,29,119) */
+  
+  
+  /* GLOBAL RULES AND OVERRIDES */
+  *, *:before, *:after {
+        -moz-box-sizing: border-box; 
+        -webkit-box-sizing: border-box; 
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 0;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent; /* For some Androids */
+   }
+   
+  
+  
+  /* TAG SPECIFIC STYLING */
+  body{
+      
+  }
+  
+  html{font-size: 80%;}
+  
+  input, textarea, select, button{	
+      font-family: 'Segoe UI', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial,Sans-Serif;
+  }
+  
+  .blackout{font-family: 'Blackout Midnight';}
+  h2.blackout{font-size: 3rem;}
+  img{
+      width: 100%;
+      height: auto;
+      }
+  button{
+      text-transform: uppercase;
+      border: 4px solid rgba(66,66,66,1);	
+      text-align: center;  
+      padding: 10px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+  }
+  
+  header{
+      transform: translate3d(0,0,0);
+      width: 100%;
+      height: 60px;
+      position: fixed;
+      top: 0;
+      background: rgba(66,66,66,1);
+      z-index: 999;
+  }
+  
+  header #headspace{
+      min-width: 300px;
+      width: 80%;
+      margin: 20px auto 0;
+  }
+      
+      header #headspace h2{
+          font-size: 2.2rem;
+          float: right;
+          color: rgba(255,255,255,1);
+      }
+      
+      header #headspace h2.page_title{
+          font-family: 'Blackout Midnight';
+      }
+      
+      header #headspace h2#timer{
+          font-family: 'Segoe UI', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial,Sans-Serif;
+          font-weight: 100;		
+      }
+  
+  header img{width: 100%; height: auto}
+  
+  header div#headerControls{
+      float: left;
+      overflow: auto;
+  }
+  header div#backButton, header div#resetButton, header div#skipButton{
+      width: 30px;
+      display: inline-block;
+      float: left;
+      cursor: pointer;
+      margin-right: 10px;
+  }	
+  
+  header img{
+      width: 100%;
+      height: auto;
+  }
+  
+  
+  
+  /* ITEMS REFERENCED BY ID */
+  div#container{width: 80%; width: 80vw; min-width: 300px; margin: 70px auto 0; position: relative; overflow: hidden;}
+  div#main{float: left; margin: 0 auto; width: 100%; overflow: hidden;}
+  div#container footer{float: left; width: 100%; overflow: hidden;}
+  
+  header button#home_button{
+          border: none;
+          float: right;
+          background: transparent;
+          color: rgba(255,255,255,.4);
+          padding: 0;
+          padding-left: 4px;
+          margin: 0 auto;
+          height: auto;
+      }
+      
+      header button#home_button img{
+          width: 80px;
+          height: auto;
+      }
+      
+      header button#home_button h2, header button#home_button h3{
+          font-family: 'Blackout Midnight';
+          font-size: 2.3rem;
+          color: rgba(33,33,33,1);
+          margin-top: 3px;
+      }
+  
+  
+  .clear_context{font-style: italic;}
+  img.lock_icon{margin-left: 20px; width: 24px; height: 24px;}
+  
+  div.message{
+      text-align: center;
+      padding: 40px;
+      background: rgba(33,33,33,1);	
+      border-width: 2px 2px 2px;
+      border-style: solid;
+      border-color: rgba(255,255,255,.9);
+      color: rgba(255,255,255,1);
+  }
+  
+  div.message p{
+      font-size: 1rem;
+  }
+  
+  div.message img{
+      margin: 10px auto;
+      width: auto;
+      display: block;
+  }
+  
+  div.message button{
+      width: 50%;
+      min-width: 200px;
+      margin: 20px auto;
+      display: block;
+  }
+  
+  
+  div.message table{
+      margin: 0 auto;
+  }
+  
+  div.message table td{
+      padding: 4px;
+  }
+  
+  ul.paged_menu_list{
+      overflow: auto;
+      margin: 0 auto;
+      width: 80%;
+      width: 80vw;
+  }	
+  
+  .menu_item{
+      text-transform: uppercase; 
+      text-align: center;  
+      border: 2px solid rgba(66,66,66,1); 
+      cursor: pointer;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;	
+      margin-bottom: 1%;
+      margin-bottom: 1vh;
+      font-size: 1.1rem;
+      list-style: none;
+      }
+  
+  .centered{
+      margin: 2% auto 2%;
+      margin: 1vh auto 1vh;
+      padding: 2%;
+      padding: 2vh;
+  }
+  
+  
+  
+  .menu_item.float{
+      width: 19%;
+      width: 19vw; 
+      height: 100px;
+      height: 19vw; 
+      margin: 0 1% 1% 0;
+      margin: 0 1vw 1vw 0; 
+      line-height: 50px;
+      line-height: 10vw;
+      font-size: 2rem;
+      float: left;
+      padding: 1rem;
+  }
+  
+  .group_menu{
+      width: 60%;
+      margin: 0 auto;
+  }
+  
+      .group_menu ul, .group_menu ul li{
+          list-style: none;
+      }
+  span.header_difficulty{display: none;}
+  section.game{text-align: center; overflow: hidden; width: 100%; }
+      section.game span.input.key.decoded, 
+      section.game span.key.encoded, 
+      section.game div.phrase_decoded span.input, 
+      section.game div.phrase_decoded span, 
+      section.game div.phrase_encoded span {
+          font-size: 1rem;
+          width: 1.4rem;
+          margin-right: 4px;	
+      }
+      
+      section.game div.clue, section.game div.key, section.game div.phrase{
+          text-align: center;
+      }
+      
+      section.game div.clue{
+          margin-bottom: 10px;
+          font-size: 1.2rem;
+      }
+      
+      section.game div.key{
+          border-bottom: 1px solid rgba(66,66,66,1);
+          padding-bottom: 5px;
+      }
+      
+      section.game div.key, section.game div.phrase{
+          height: auto;
+          overflow: auto;
+          width: 100%;
+      }
+  
+      section.game div.key{
+          float: left;
+      }
+  
+      section.game div.phrase{
+          position: relative;
+      }
+      
+      
+      section.game div.key_decoded, section.game div.key_encoded{
+          float: left;
+          width: 100%;
+          }
+      
+          section.game div.key_decoded{
+              top: 0;
+              left: 0;
+              z-index: 3;
+          }
+          
+          section.game div.key_encoded{
+              top: 20px;
+              left: 0;
+              -webkit-user-select: none;
+              z-index: 1;
+          }
+      
+          section.game div.phrase_decoded, section.game div.phrase_encoded{
+              width: 100%;
+              line-height: 4rem;
+          }
+          
+          section.game div.phrase_decoded{
+              position: relative;
+              z-index: 3;
+          }
+          
+          section.game div.phrase_encoded{
+              position: relative;
+              top: 1.8rem;
+              margin-bottom: 3rem;
+          }
+      
+          section.game span{
+              display: inline-block;	
+          }
+  
+  
+  section.game span.input{
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      text-align: center; 
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0;
+      -webkit-appearance: none;
+      border-width: 0 0 1px;
+      border-style: solid;
+      line-height: 1.6rem;
+      }
+      
+      section.game span.input.decoded.key{
+          border-color: rgba(255,152,29,1);
+      }
+      
+      section.game span.input.decoded{
+          border-color: rgba(37,114,235,1); 
+      }
+      
+      div.timed_word_spacer{
+          display: inline-block;
+      }
+  
+  /*
+  section.game input.key.decoded{
+      background: rgba(255,158,0,1);
+  }
+  */
+  
+  
+  section.game span.matching_letter, section.game input.decoded.matching_letter{
+      outline: none;
+      background: rgba( 140, 0, 149,1);
+  }
+  
+  section.game span.matching_letter.active_input{
+      background: rgb(243,178,0);
+  }
+  
+  section.game input{
+      color: rgba( 255, 255, 255,1); 
+  }
+  
+  
+  input::selection{
+      color: rgba(66,66,66,1);
+      background: rgba( 140, 0, 149,1);
+  }
+  
+  div.controls{
+      position: relative;
+      float: left;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      min-width: 300px;
+  }
+  
+      div.page_display{
+          margin: 0 auto;
+          max-width: 200px;
+      }
+  
+      div.page_display span{
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          border: none;
+          border-radius: 25px;
+          margin: 10px 2px;
+      }
+  
+          .page_link{
+              background: rgba(66,66,66,1);
+              cursor: pointer;
+          }
+  
+          .page_link.current{
+              background: rgb(37,114,235);
+          }
+  
+      div.controls div.timed_controls{
+          margin: 20px auto;
+          width: 30%;
+          min-width: 300px;
+      }
+  
+      div.controls button{
+          min-width: 80px;
+      }
+      
+  
+      
+          div.controls button.submenu{
+              border: none;
+              background: transparent;
+              min-width: 40px;
+              max-width: 40px;
+              padding: 0;
+              margin: 0;
+          }
+  
+          div.controls button.back{
+              position: absolute;
+              top: 0;
+              left: 0;
+          }
+  
+          div.controls button.forward{
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin-right: 0;
+          }
+  
+          div.controls button.submenu.forward img, div.controls button.submenu.back img{
+              width: 100%;
+              height: auto;
+          }
+          
+          div.controls button.submenu.back{
+              float: left;
+              margin-left: 1%;
+          }
+          
+  
+          div.controls button.board.next{
+              margin: 20px auto;
+          }
+  
+  div.decoded, div.encoded{display: inline-block; padding: 0; margin: 0;}
+  
+  
+  /* TIMED GAME STYLING */
+  div.timed_input{
+      padding: 10px 0; 
+      width: 100%; 
+      min-width: 300px; 
+      border-style: solid;
+      border-width: 1px 0 0; 
+      border-color: rgba(66,66,66,1);
+      position: relative;
+  }
+  
+      div.timed_input div.phrase_decoded, div.timed_input div.phrase_encoded{line-height: 3rem; margin-bottom: 1rem;}
+      div.timed_input div.phrase_encoded{top: .5rem}
+  
+      div.timed div.decoded_spacer{margin-top: 0}
+      
+  span.final_score{font-size: 3rem;}
+  p.clear_phrase{margin-bottom: 20px; font-size: 1.8rem;}
+  section.game div.phrase_decoded span.clear_said_by{font-size: 1.2rem; width: auto; margin-right: 20px;}
+  section.game div.phrase_decoded span.clear_context{font-style: italic; font-size: 1.2rem; width: auto;}
+  
+  
+  #timed_game_summary_page, #decipher_clear{
+      text-align: center;
+  }
+  
+  p.timer{
+      line-height: 1rem; /* seems to correct iOS sizing issue */
+      border: none;
+      font-size: 2.3rem;
+      background: transparent;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 0;
+      padding: 0;
+      color: rgba(33,33,33,1);
+  }
+  
+  h2#timer.underone{color: rgba(255, 0, 0, 1);}
+  
+  /* SCORE PAGE STYLING */
+  
+  div.single_game_score{
+      margin: 1rem auto;
+  }
+  
+  div.single_game_controls button{
+      margin: 2rem auto;
+  }
+  
+  div.single_game_controls button:first-child{
+      margin: 2rem 20px 2rem 0;
+  }
+  
+  tr.placed{font-weight: 800; color: rgb(255,87,158);}
+  h2.score_header{text-align: center; margin-bottom: 10px; text-transform: uppercase;}
+  table.score_table{margin: 0 auto 20px; width: 100%; border-collapse:collapse;}
+      table tr{ border-style: solid;
+          border-width: 1px 0;
+          border-color: rgba(66,66,66,1);}
+  
+      table.score_table td{text-align: center; width: 33%; padding: 5px 0;}
+      table.score_table span, div.single_game_score span{display: inline-block; text-align center; width: 20px; height: 20px; border-radius: 25px; font-size: 1.2rem; margin-right: 2px;}
+          span.difficulty_1{background: rgb(105,27,184);}
+          span.difficulty_2{background: rgb(0,106,193);}
+          span.difficulty_3{background: rgb(243,178,0);}
+          span.difficulty_4{background: rgb(255,29,119);}
+  
+  /* HERE THERE BE OPTIONS */
+  div.option_box{width: 100%; margin: 0 auto 20px; text-align: center;}
+      div.option_group li{
+          max-width: 250px;
+          text-align: center;
+          list-style: none;
+          display: inline-block;
+          width: 40%;
+          border: 2px solid rgba(66,66,66,1);
+          padding: 2%;
+          padding: 2vh;
+          margin-right: 20px;
+          margin-bottom: 10px;
+          background: transparent;
+          color: rgba(255,255,255,1);
+      }
+      div.option_box h2{
+          margin: 20px auto 5px; text-transform: uppercase;
+      }
+  
+  
+  div.option_group li.selected{
+      font-weight: 800;
+      background: rgba(0,162,255,1); 
+  }
+  
+  /* MESSAGE PAGE STYLING */
+  section.mailto{
+      width: 100%;
+      text-align: center;
+  }
+  
+  section.mailto label{width: 100%; display: block; margin-bottom: 10px;}
+  section.mailto input, section.mailto textarea, section.mailto select{width: 100%; max-width: 320px; font-size: 1rem; display: block; margin: 0 auto 10px; text-transform: uppercase; padding: 4px;  border: 2px solid rgba(66,66,66,1);}
+  section.mailto input[type="submit"]{font-size: 1rem; padding: 20px; margin-bottom: 10px; -webkit-appearance: none; }
+  
+  /* ADVERTISING STYLING */
+  section.buy{margin: 0 auto;}
+  div.shotbox{ display: inline-block; margin: 20px 20px; }
+  div.shotbox img{width: 150px; height: auto; padding: 20px; border: 2px solid rgba(66,66,66,1);}
+  
+  .small_pad{padding: 15px 0;}
+  .navigate{background: rgb(37,114,235); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15);}
+  .help{background: rgb(145,209,0); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15)}
+  .action{background: rgb(255,152,29); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15)}
+  .notice{background: rgb(255,46,18); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15)}
+  
+  .alert{outline: 2px solid rgba(255,46,18,1);}
+  
+  .difficulty_1{color: rgb(105,27,184);}
+  .difficulty_2{color: rgb(0,106,193);}
+  .difficulty_3{color: rgb(243,178,0);}
+  .difficulty_4{color: rgb(255,29,119);}
+  
+  .score .points1,.score .points2, .score .points3, .score .points4, .score .points5{ width: 20px; height: 40px;}
+  
+  .score .points1{background: rgb(105,27,184);}
+  .score .points2{background: rgb(0,106,193);}
+  .score .points3{background: rgb(243,178,0);}
+  .score .points4{background: rgb(255,29,119);}
+  
+  .menu_item.easy{border-color: rgb(105,27,184);}
+  .menu_item.medium{border-color: rgb(0,106,193);}
+  .menu_item.hard{border-color: rgb(243,178,0);}
+  .menu_item.master{border-color: rgb(255,29,119);}
+  
+  
+  .menu_item.easy.complete{background: rgb(105,27,184); border-color: rgba(255,255,255,.3);}
+  .menu_item.medium.complete{background: rgb(0,106,193); border-color: rgba(255,255,255,.3);}
+  .menu_item.hard.complete{background: rgb(243,178,0); border-color: rgba(255,255,255,.3);}
+  .menu_item.master.complete{background: rgb(255,29,119); border-color: rgba(255,255,255,.3);}
+  
+  /* HARDWARE ACCELERATION HELPER CLASS */
+  .hwa{
+      -webkit-transform: translate3d(0,0,0);
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform-style: flat;
+      font-family: 'Segoe UI', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial,Sans-Serif;
+      height:100%;     
+      background: rgba(33,33,33,1); 
+      color: rgba(255,255,255,1);
+      display: none;
+      overflow: auto;
+
+  }
+  
+  /* KEYBOARD STYLING */
+  #keyboard{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      background: rgba(66,66,66,.8);
+      width: 100%;
+      margin: 0 auto;
+      z-index: 99;
+  }
+  
+  .keyboard_row{
+      text-align: center;
+  }
+  
+      .keyboard_row .key{
+          display: inline-block;
+          width: 28px;
+          -webkit-user-select: none;
+          user-select: none;
+          height: 38px;
+          background: rgba(147,147,147,1);
+          color: rgba(255,255,255,1);
+          border-radius: 4px;
+          text-align: center;
+          margin: 2px;
+          padding: 12px 8px;
+          line-height: 1rem;
+          cursor: pointer;
+          -webkit-transition: -webkit-transform .1s;
+  
+      }
+      
+  
+      
+      .keyboard_row .key.used_letter{
+          color: rgba(66,66,66,1);
+      }
+      
+          .keyboard_row .key.clicked{
+          -webkit-transform: scale(1.1, 1.1);
+          -webkit-transition: -webkit-transform .1s;
+          color: rgba(255,46,18,1);;
+      }
+      
+          .keyboard_row .key.delete{
+              width: 40px;
+              background: rgba(255,46,18,1);
+          }
+          
+          .keyboard_row .key.delete.clicked{
+              color: rgba(255,255,255,1);
+          }
+  
+  
+  
+  
+  /* THIS IS THE LIGHT THEME CLASSES */
+  /* BLUE RGB(90, 200, 250)
+  /* ORANGE RGB(255,149,0)
+  /* GREEN RGB(76, 217,100)
+  /* RED 	RGB(255,59,48)
+  
+  /* PURPLE RGB(88,86,214)
+  /* DARK BLUE RGB(0,122,255)
+  /* YELLOW RGB(255,204,0)
+  /* PINK	RGB(255,45,85) */
+  
+  body.light{background: rgba(255,255,255,1);}
+  body.light, body.light button, body.light h1, body.light h2, body.light input{color: rgba(147,147,142,1);}
+      
+      body.light button#home_button h2, body.light button#home_button h3{color: rgba(255,255,255,1)}
+      body.light p.timer{color: rgba(255,255,255,1);}
+      body.light h2#timer.underone{color: rgba(0, 200, 250, 1);}
+  
+      body.light .menu_item.centered{
+          border-color: rgba(90, 200, 250,1);
+          background: rgb(90, 200, 250);
+          color: rgba(255,255,255,1);
+      }
+  
+      body.light div.option_group button.selected{
+          background: rgba(90, 200, 250,1);
+          border-color: rgba(255,255,255,.3);
+          color: rgba(255,255,255,1);
+      }
+  
+      body.light .menu_item.complete{
+          background: rgba(76, 217,100,1);
+      }
+  
+      body.light section.game div.key{
+          border-bottom: 1px solid rgba(147,147,142,1);
+      }
+  
+      body.light div.page_display span{
+          background: rgba(147,147,142,1);
+      }
+  
+      body.light div.page_display span.action{
+          background: rgba(76, 217,100,1);
+      }
+  
+      body.light .navigate{background: rgb(90, 200, 250); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15);}
+      body.light .help{background: rgb(76, 217,100); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15)}
+      body.light .action{background: rgb(255,149,0); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15)}
+      body.light .notice{background: rgb(255,59,48); color: rgb(255,255,255); border: 1px solid rgba(255,255,255,.15)}
+  
+      body.light .alert{outline: 2px solid rgba(255,59,48,1);}
+      
+      body.light span.difficulty_1{background: rgb(88,86,214);}
+      body.light span.difficulty_2{background: rgb(0,122,255);}
+      body.light span.difficulty_3{background: rgb(255,204,0);}
+      body.light span.difficulty_4{background: rgb(255,45,85);}
+          
+      body.light .difficulty_1{color: rgb(88,86,214);}
+      body.light .difficulty_2{color: rgb(0,122,255);}
+      body.light .difficulty_3{color: rgb(255,204,0);}
+      body.light .difficulty_4{color: rgb(255,45,85);}
+  
+  
+      body.light .score .points1{background: rgb(88,86,214);}
+      body.light .score .points2{background: rgb(0,122,255);}
+      body.light .score .points3{background: rgb(255,204,0);}
+      body.light .score .points4{background: rgb(255,45,85);}
+  
+      body.light .menu_item.easy{border-color: rgb(88,86,214);}
+      body.light .menu_item.medium{border-color: rgb(0,122,255);}
+      body.light .menu_item.hard{border-color: rgb(255,204,0);}
+      body.light .menu_item.master{border-color: rgb(255,45,85);}
+  
+      body.light .menu_item.easy.complete{background:rgb(88,86,214); border-color: rgba(147,147,142,.3); color: rgba(255,255,255,1);}
+      body.light .menu_item.medium.complete{background: rgb(0,122,255); border-color: rgba(255,255,255,.3); color: rgba(255,255,255,1);}
+      body.light .menu_item.hard.complete{background: rgb(255,204,0); border-color: rgba(255,255,255,.3); color: rgba(255,255,255,1);}
+      body.light .menu_item.master.complete{background: rgb(255,45,85); border-color: rgba(255,255,255,.3); color: rgba(255,255,255,1);}
+  
+      body.light .page_link.current{
+          background: rgb(255,149,0);
+      }
+      body.light table tr{ border-color: rgba(147,147,142,1);}
+  
+      body.light div.option_group li{
+          border: none;
+          background: rgb(90, 200, 250);
+      }
+  
+      body.light div.option_group li.selected{
+          background: rgba(0,122,255,1);
+      }
+  
+  
+      body.light span.input.key.decoded{
+          border-color: rgba(255,149,0,1);
+      }
+  
+      body.light span.input.decoded{
+          border-color: rgba(90, 200, 250,1);
+      }
+      
+      body.light section.game span.matching_letter{
+          background: rgba(76, 217,100,1); 
+          color: rgba(255,255,255,1);
+      }
+      
+      body.light section.game span.matching_letter.active_input{
+          background: rgb(88,86,214);
+          color: rgba(255,255,255,1);
+      }
+  
+      body.light span::selection{
+          color: rgba(66,66,66,1);
+          background: rgba(76, 217,100);
+      }	
+      
+      body.light div.message{
+          background: rgba(0,0,0,.9);
+          color: rgba(255,255,255,1);
+      }
+  
+      body.light div.shotbox {width: 100%; height: auto; border: 2px solid rgba(147,147,142,1);}
+      body.light div.timed{border-color: rgba(147,147,142,1); border-style: solid;}
+  
+      body.light header{
+          background: rgba(255,45,85,1);
+      }
+      body.light div.timed_input{ 
+          border-color: rgba(147,147,142,1);
+      }
+  
+  
+  
+  /* KEYBOARD STYLING */
+  body.light #keyboard{
+      background: rgba(255,255,255,.8);
+      width: 100%;
+      margin: 0 auto;
+      z-index: 99;
+  }
+  
+      
+      body.light .keyboard_row .key.delete{
+          background: rgba(255,59,48,1);
+      }
+  
+  
+  
+  /* THIS CHANGES TO THE SERIF FONT STYLE */
+  body.serif, body.serif input, body.serif button, body.serif header button#home_button{font-family: "Lucida Bright", Georgia, serif;}
+      
+  /* blur class for message popups */
+  div#container.blur, div#container.blur button, div#container.blur input{ color: transparent;
+     text-shadow: 0 0 5px rgba(255,255,255,0.9);}
+  
+  /* iPhone landscape fixes */
+  @media (min-width: 480px) and (orientation: landscape) { 
+      header{
+          height: 55px;
+      }
+  
+      div#container{margin: 70px auto 0;}
+      
+      .menu_item.float{
+          width: 15%;
+          width: 15vw; 
+          height: 15vw; 
+          margin: 0 1% 1% 0;
+          line-height: 10vw;
+      }
+  
+      .keyboard_row .key{
+          width: 42px;
+          height: 28px;
+          padding: 8px 8px;
+      }
+          .keyboard_row .key.delete{
+              width: 66px;
+              background: rgba(255,46,18,1);
+          }
+  }
+  
+  /* Kindle Fire fixes */
+  @media (min-width: 600px) { 
+      span.header_difficulty{display: inline;}
+      .keyboard_row .key{
+          width: 52px;
+          height: 66px;
+          border-radius: 4px;
+          margin: 4px;
+          padding: 24px 12px;
+          line-height: 1em;
+      }
+          
+          .keyboard_row .key.delete{
+              width: 96px;
+              background: rgba(255,0,0,1);
+          }
+  }
+  
+  /* iPad Portrait CSS */
+  @media (min-width: 768px) { 
+      html{font-size: 120%;}
+      header{
+          height: 80px;
+      }
+  
+      header #headerPlacer{
+          margin: 30px auto 0;
+      }
+  
+      header div#backButton, header div#resetButton, header div#skipButton{
+          width: 40px;
+          height: 40px;
+      }
+  
+      div#container{margin: 100px auto 0; position: relative; overflow: hidden;}
+      div#main{float: left; margin: 0 auto; width: 100%;}
+      div#container footer{float: left; width: 100%; overflow: auto;}
+  
+      footer div.forsale{
+          width: 80%;
+          margin: 0 auto;
+          min-width: 300px;
+          text-align: center;
+      }
+      div.page_display{
+          max-width: 400px;
+      }
+  
+  
+      div.controls button.submenu{
+          min-width: 80px;
+          max-width: 80px;
+      }
+  
+      div.page_display span{
+          width: 25px;
+          height: 25px;
+          margin: 10px 2px;
+      }
+      
+      .menu_item{
+          font-size: 1.5rem;
+      }
+      .keyboard_row .key{
+          width: 66px;
+          height: 66px;
+          border-radius: 4px;
+          margin: 4px;
+          padding: 16px 12px;
+          line-height: 1em;
+      }
+          
+          .keyboard_row .key.delete{
+              width: 96px;
+              background: rgba(255,0,0,1);
+          }
+  
+  }
+  
+  
+  
+  /* iPad and Fire portrait */
+  @media (min-width : 1024px) and (orientation: portrait){ 
+      html{font-size: 160%;}
+      header{
+          height: 140px;
+      }
+      
+      section.game span.input.key.decoded, 
+      section.game span.key.encoded, 
+      section.game div.phrase_decoded span.input, 
+      section.game div.phrase_decoded span, 
+      section.game div.phrase_encoded span {
+          font-size: 1.6rem;
+          width: 1.6rem;
+          margin-right: 4px;	
+          line-height: 2.0rem;
+      }
+  
+      header div#backButton, header div#resetButton, header div#skipButton{
+          width: 80px;
+          height: 80px;
+          margin-right: 20px 	;
+      }
+  
+      div.page_display{
+          max-width: 600px;
+      }
+  
+      p.timer, header button#home_button h2, header button#home_button h3{
+          font-size: 3em;
+      }
+      
+  
+      div#container{margin: 160px auto 0;}
+  
+      div.controls button.submenu{
+              min-width: 80px;
+              max-width: 80px;
+      }
+  
+      div.page_display span{
+          width: 35px;
+          height: 35px;
+          margin: 10px 2px;
+      }
+  
+  
+  
+      .keyboard_row .key{
+          width: 9%;
+          height: 100px;
+          border-radius: 4px;
+          margin: .5%;
+          padding: 30px 12px;
+          line-height: 1em;
+      }
+          
+          .keyboard_row .key.delete{
+              width: 96px;
+              background: rgba(255,0,0,1);
+          }
+  }
+  
+  /* iPad and Fire landscape */
+  @media (min-width : 1024px) and (orientation: landscape){ 
+      html{font-size: 120%;}
+      header{
+          height: 100px;
+      }
+  
+      header div#backButton, header div#resetButton, header div#skipButton{
+          width: 60px;
+          height: 60px;
+          margin-right: 20px 	;
+      }
+  
+      div.page_display{
+          max-width: 600px;
+      }
+  
+      p.timer, header button#home_button h2, header button#home_button h3{
+          font-size: 3em;
+      }
+      
+      div#container{margin: 120px auto 0; }
+  
+      div.controls button.submenu{
+              min-width: 80px;
+              max-width: 80px;
+      }
+  
+      div.page_display span{
+          width: 35px;
+          height: 35px;
+          margin: 10px 2px;
+      }
+  
+      .menu_item.float{
+          width: 12.33%;
+          width: 12.33vw; 
+          height: 12.33vw; 
+          margin: 0 1% 1% 0;
+          margin: 0 .5vw 1vw .5vw;
+          line-height: 7vw;
+      }
+  
+      .keyboard_row .key{
+          width: 9%;
+          width: 9vw;
+          height: 70px;
+          border-radius: 4px;
+          margin: .4%;
+          margin: .4vw;
+          line-height: 1em;
+      }
+          
+          .keyboard_row .key.delete{
+              width: 18%;
+              width: 18vw;
+              background: rgba(255,0,0,1);
+          }
+  }

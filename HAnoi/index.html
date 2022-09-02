@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnoi</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body style="background: url(http://sweetclipart.com/multisite/sweetclipart/files/nature_settings_simple_landscape_1.png) no-repeat left center; background-size: cover;">
+    <header class="header">
+        <a href="#" class="logo">  </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtoplay.html">How to play</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+    <div class="restart"><p class="text">restart</p></div>
+    <div class="pos"><div class="score"><p class="text">moves</p><p class="numbermoves">0</p></div></div>
+    <div class="full"><div class="hone"><div id="c1" class="third c1"</div><div id="b5" class="block"></div><div id="b4" class="block"></div><div id="b3" class="block"></div><div id="b2" class="block"></div><div id="b1" class="block"></div><div class="rod"><div class="ro2"></div></div><div class="bottom"></div></div>
+    
+    </div>
+    
+    <div class="htwo"><div id="c2" class="third c2"><div class="rod"><div class="ro2"></div></div><div class="bottom"></div></div></div>
+    <div class="hthree"><div id="c3" class="third c3"><div class="rod"><div class="ro2"></div></div><div class="bottom"></div></div></div>
+    </div>
+    </body>
+    <script src="main.js"></script>
+</html>

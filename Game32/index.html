@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards--poker</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/canvasplay/game-cards/master/dist/game-cards.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"> HSPL </a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">contact us</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+    <script>
+        
+    
+    
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    
+    var swiper = new Swiper(".product-slider", {
+        loop:true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1020: {
+            slidesPerView: 3,
+          },
+        },
+    });
+    
+    var swiper = new Swiper(".review-slider", {
+        loop:true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        centeredSlides: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1020: {
+            slidesPerView: 3,
+          },
+        },
+    });
+    </script>
+    
+<div class="game-cards cards--poker">
+    <div class="cards">
+      <div class="card diamonds  rank-A">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">A</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-2">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">2</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-3">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">3</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-4">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">4</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-5">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">5</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-6">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">6</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-7">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">7</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-8">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">8</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-9">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">9</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-10">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">10</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-J">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">J</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-Q">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">Q</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card diamonds  rank-K">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">K</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card spades  rank-A">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">A</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-2">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">2</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-3">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">3</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-4">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">4</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-5">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">5</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-6">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">6</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-7">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">7</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-8">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">8</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-9">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">9</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-10">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">10</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-J">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">J</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-Q">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">Q</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card spades  rank-K">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">K</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card hearts  rank-A">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">A</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-2">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">2</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-3">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">3</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-4">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">4</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-5">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">5</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-6">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">6</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-7">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">7</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-8">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">8</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-9">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">9</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-10">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">10</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-J">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">J</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-Q">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">Q</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card hearts  rank-K">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">K</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card clubs  rank-A">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">A</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-2">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">2</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-3">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">3</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-4">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">4</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-5">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">5</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-6">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">6</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-7">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">7</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-8">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">8</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-9">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">9</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-10">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">10</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-J">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">J</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-Q">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">Q</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card clubs  rank-K">
+        <div class="flipper">
+          <div class="face">
+            <div class="suit"></div>
+            <div class="rank">K</div>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

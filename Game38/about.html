@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./header-style.css">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <a href="index.html" class="logo"> HSPL </a>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">contact us</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+  </header>
+
+
+  <div class="container">
+    <section class="heading">About</section>
+
+    <div class="content_container">
+      <section class="content">
+        <h2>What is Typing Master?</h2>
+        <p>
+          Well, as you can guess by the name, it is a typing game where you
+          can increase your typing speed and typing accuracy by playing it
+          daily. It's a funniest way to increase your typing speed, as well as
+          your ability to read the words correctly just at a glance. Now you
+          don't need to look for extra free time to practice to increase your
+          typing ability, you can sit anywhere and start playing this game.
+          It's a single page like game so you can play it on any device. Just
+          open the game, start playing and increase your typing speed day by
+          day
+        </p>
+
+        <h2>How to play?</h2>
+        <p>
+          Playing it is quite simple, you just need to type the word that
+          appears on your screen in the section given just below the word.
+          There will only be a time of a few seconds for each word, the
+          shortest the word the shorter the time period. Type the word
+          correctly as fast as you can, and once you type it correctly the
+          next word will automatically appear, keep typing and new words will
+          automatically keep appearing. If you mistype any word you will lose,
+          then type the appeared word again and your score will restart. Same
+          thing will happen if you can't type the given word in the given
+          time. Keep playing as long as you can and increase your typing
+          speed.
+        </p>
+
+        <h2>Who can play?</h2>
+        <p>
+          Anyone who wants to increase their typing speed can play this game.
+          Of course, students are the ones who will play it the most, but a
+          teacher, a parent, or any other person who wants to increase their
+          typing speed can play it. This game has been designed to enhance
+          typing ability in a fun way. Also those who want to increase their
+          focus, can also use it for that purpose.
+        </p>
+
+        <h2>Why should you play it?</h2>
+        <p>
+          The most simple reason to play this game is to increase your typing
+          ability. It is a single page and very light web game so unlike some
+          other typing games you don't need a decent device to play it, you
+          can play it on any smartphone of any specifications. The purpose of
+          creating this game is to improve the typing speed of the player
+          while learning new words at the same time. So by playing it you will
+          not only increase your typing speed but also keep your vocabulary
+          good.
+        </p>
+
+        <h2>Benefits of playing it?</h2>
+        <p>
+          Its name is Typing Master, so it will definitely make you a master
+          of typing but this is not the only benefit of playing it. Since you
+          have to type the words very fast after seeing it, it will
+          automatically increase your focus. Good typing speed and accuracy
+          are very important skills to have nowadays. Whether you are learning
+          to type or want to improve your skills, you can do it with this
+          typing game. The more you play this game the more your typing speed
+          and accuracy get enhanced. You can reach a decent typing speed and
+          accuracy by playing it for a couple of minutes on a daily basis.
+        </p>
+      </section>
+    </div>
+  </div>
+</body>
+
+<script>
+
+
+
+  let navbar = document.querySelector('.navbar');
+
+  document.querySelector('#menu-btn').onclick = () => {
+    navbar.classList.toggle('active');
+
+  }
+
+  window.onscroll = () => {
+    navbar.classList.remove('active');
+  }
+
+  var swiper = new Swiper(".product-slider", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  var swiper = new Swiper(".review-slider", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+</html>

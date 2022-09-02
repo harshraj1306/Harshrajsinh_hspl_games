@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/canvasplay/game-cards/master/dist/game-cards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="header" style="height: 70px;">
+    <a href="index.html" class="logo"> HSPL </a>
+    <nav class="navbar" style="top: 25px;">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">contact us</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+
+<!-- navbar script  -->
+<script>
+    
+
+
+  let navbar = document.querySelector('.navbar');
+  
+  document.querySelector('#menu-btn').onclick = () =>{
+      navbar.classList.toggle('active');
+  
+  }
+  
+  window.onscroll = () =>{
+      navbar.classList.remove('active');
+  }
+  
+  var swiper = new Swiper(".product-slider", {
+      loop:true,
+      spaceBetween: 20,
+      autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+  });
+  
+  var swiper = new Swiper(".review-slider", {
+      loop:true,
+      spaceBetween: 20,
+      autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+  });
+  </script>
+
+
+    <!-- body script  -->
+    <script type="text/html" id="cards-template">
+
+        <%
+      
+          var count = _.find(arguments,function(i){ return i.name=="count" });
+        count = (count.value)? parseInt(count.value) : 1;
+        
+        var classes = [];
+        
+          var mode = _.find(arguments,function(i){ return i.name=="mode" });
+        if(mode && mode.value) classes.push('cards--'+mode.value);   
+        
+          var reverse = _.find(arguments,function(i){ return i.name=="reverse" });
+        if(reverse && reverse.value=='on') classes.push('cards--reverse');
+        
+          var overlap = _.find(arguments,function(i){ return i.name=="overlap" });
+        if(overlap && overlap.value=='on') classes.push('cards--overlap'); 
+        
+          var align = _.find(arguments,function(i){ return i.name=="align" });
+        if(align && align.value) classes.push('cards--align-'+align.value); 
+        
+      %>
+      
+      <div class="cards <%= classes.join(' ') %> cards--deck">
+      <% for(var i=0; i<count; i++){ %>
+      
+          <div class="card">
+              <div class="turner">
+              <div class="flipper">
+                <div class="back">
+                  <strong>B</strong>
+                </div>          
+                <div class="face">
+                  <strong data-value="<%= i+1 %>"><%= i+1 %></strong>
+                </div>
+              </div>
+              </div>
+          </div>
+      
+      <% } %>
+      </div>
+      
+    </script>
+    
+    
+    <div class="cards-view">
+      
+    </div>
+    
+    <form class="cards-form">
+      
+      <div class="buttons">
+        
+          <div class="form-group">
+            
+            <label>contents</label>
+            
+            <a href="javascript:;" class="button-count btn btn-xs btn-link" data-value="1">
+              <i class="material-icons">exposure_plus_1</i>
+            </a>
+            <a href="javascript:;" class="button-count btn btn-xs btn-link" data-value="-1">
+              <i class="material-icons">exposure_neg_1</i>
+            </a>
+            
+            <input name="count" type="hidden" value="3" />
+                                          
+          </div>
+      
+          <div class="form-group">
+    
+            <label>mode</label> 
+            
+            <div class="btn-group">
+              
+              <label>
+                <input type="radio" name="mode" value="row">
+                <i class="material-icons"></i>
+                <span>row</span>
+              </label>
+    
+              <label>
+                <input type="radio" name="mode" value="column">
+                <i class="material-icons"></i>
+                <span>column</span>
+              </label>
+    
+              <label>
+                <input type="radio" name="mode" value="fan">
+                <i class="material-icons"></i>
+                <span>fan</span>
+              </label>
+      
+            </div>
+            
+          </div>
+        
+          <div class="form-group">
+            <label>reverse</label> 
+            <div class="btn-group">
+              <label>
+                <input type="checkbox" name="reverse">
+                <i class="material-icons"></i>
+                <span>reverse</span>
+              </label>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label>overlap</label> 
+            <div class="btn-group">
+              <label>
+                <input type="checkbox" name="overlap">
+                <i class="material-icons"></i>
+                <span>overlap</span>
+              </label>
+            </div>
+          </div>
+        
+          <div class="form-group">
+    
+            <label>alignment</label> 
+            
+            <div class="align-group">
+              
+              <label>
+                <input type="radio" name="align" value="top-left">
+                <i class="material-icons"></i>
+              </label>
+    
+              <label>
+                <input type="radio" name="align" value="top">
+                <i class="material-icons"></i>
+              </label>
+    
+              <label>
+                <input type="radio" name="align" value="top-right">
+                <i class="material-icons"></i>
+              </label>
+              
+              <br>
+              
+              <label>
+                <input type="radio" name="align" value="left">
+                <i class="material-icons"></i>
+              </label>
+    
+              <label>
+                <input type="radio" name="align" value="center">
+                <i class="material-icons"></i>
+              </label>
+    
+              <label>
+                <input type="radio" name="align" value="right">
+                <i class="material-icons"></i>
+              </label>
+              
+              <br> 
+              
+              <label>
+                <input type="radio" name="align" value="bottom-left">
+                <i class="material-icons"></i>
+              </label>
+    
+              <label>
+                <input type="radio" name="align" value="bottom">
+                <i class="material-icons"></i>
+              </label>
+    
+              <label>
+                <input type="radio" name="align" value="bottom-right">
+                <i class="material-icons"></i>
+              </label>      
+              
+            </div>
+            
+          </div>    
+        
+        
+      </div>
+      
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
