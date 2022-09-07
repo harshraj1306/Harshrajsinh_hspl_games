@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="http://redhivesoftware.com/calculators/Cruncher.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="navlinks">
+        <a href="#" class="logo">  </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </div>
+    <script>
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick = () =>{
+        navbar.classList.toggle('active');
+    
+    }
+    
+    window.onscroll = () =>{
+        navbar.classList.remove('active');
+    }
+    </script>
+    <div class="col-sm-offset-1 col-sm-10 col-md-offset-3 col-md-6">
+        <div class="col-xs-12 mt30 ptb30" ng-app="calculator" ng-controller="calculatorController">
+                    <div class="row output">
+                        <div style="border-bottom:dashed 1px #EFEFEF;" class="col-xs-12 mtb15">
+                            <span style="color:#888;">Mode</span>
+                            <span id="output" style="float:right; display:inline-block;  text-align:center;">{{mode}}</span>
+                        </div>
+                        <div style="border-bottom:dashed 1px #EFEFEF;" class="col-xs-12 mtb15">
+                            <span style="color:#888;">Output</span>
+                            <span id="output" style="float:right; display:inline-block;  text-align:center;">{{result}}</span>
+                        </div>
+                        <div class="col-xs-12 mb30">
+                            <span style="color:#888;">Input Evaluated</span>
+                            <span style="float:right; display:inline-block;  text-align:center;" ng-bind-html="formula|unsafe"></span>
+                        </div>
+                        <input my-enter class="col-xs-12" type="text" ng-model="input" placeholder="Enter the expression" id="input" />
+                    </div>
+                    <div id="buttoncontainer" class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class='col-sm-2 col-xs-2 text-center'><div class='row plr5 ptb5'>
+                                    <input type="radio" name="angle" id="degree" checked class="angle" style="display:none;">
+                                    <label for="degree" ng-click="changeAngle(true)" class="button anglelabel" style="padding:0;margin:0;">Degree</label>
+                                </div></div>
+                                <div class='col-sm-2 col-xs-2 text-center'><div class='row plr5 ptb5'>
+                                    <input type="radio" name="angle" class="angle" id="radian" style="display:none;">
+                                    <label for="radian" ng-click="changeAngle(false)" class="button anglelabel" style="padding:0;margin:0;">Radian</label>
+                                </div></div>
+                                <div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='' ng-click='changeState($event)' class='button'>MS</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='' ng-click='changeState($event)' class='button'>MC</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='a.mem' ng-click='changeState($event)' class='button'>MR</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='' ng-click='changeState($event)' class='button'>M+</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='' ng-click='changeState($event)' class='button'>M-</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='Ans' ng-click='changeState($event)' class='button'>Ans</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='' ng-click='changeState($event)' class='button'>C</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='0' ng-click='changeState($event)' class='button'>0</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='1' ng-click='changeState($event)' class='button'>1</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='2' ng-click='changeState($event)' class='button'>2</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='3' ng-click='changeState($event)' class='button'>3</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='4' ng-click='changeState($event)' class='button'>4</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='5' ng-click='changeState($event)' class='button'>5</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='6' ng-click='changeState($event)' class='button'>6</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='7' ng-click='changeState($event)' class='button'>7</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='8' ng-click='changeState($event)' class='button'>8</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='9' ng-click='changeState($event)' class='button'>9</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='sin(' ng-click='changeState($event)' class='button'>sin</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='cos(' ng-click='changeState($event)' class='button'>cos</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='tan(' ng-click='changeState($event)' class='button'>tan</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='pi' ng-click='changeState($event)' class='button'>&pi;</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='(' ng-click='changeState($event)' class='button'>(</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id=')' ng-click='changeState($event)' class='button'>)</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='' ng-click='changeState($event)' class='button'>Del</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='P' ng-click='changeState($event)' class='button'>nPr</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='C' ng-click='changeState($event)' class='button'>nCr</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='1/' ng-click='changeState($event)' class='button'>1/x</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='asin(' ng-click='changeState($event)' class='button'>sin<sup>-1</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='acos(' ng-click='changeState($event)' class='button'>cos<sup>-1</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='atan(' ng-click='changeState($event)' class='button'>tan<sup>-1</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='^(2)' ng-click='changeState($event)' class='button'>x<sup>2</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='^(1/2)' ng-click='changeState($event)' class='button'>&radic;</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='-' ng-click='changeState($event)' class='button'>&plusmn;</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='Int(' ng-click='changeState($event)' class='button'>Int</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='cosh(' ng-click='changeState($event)' class='button'>cosh</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='acosh(' ng-click='changeState($event)' class='button'>cosh<sup>-1</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id=' ln(' ng-click='changeState($event)' class='button'>ln</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='^' ng-click='changeState($event)' class='button'>x<sup>y</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='^1/' ng-click='changeState($event)' class='button'><sup>y</sup>&radic;x</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='/' ng-click='changeState($event)' class='button'>/</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='!' ng-click='changeState($event)' class='button'>n!</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='tanh(' ng-click='changeState($event)' class='button'>tanh</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='atanh(' ng-click='changeState($event)' class='button'>tanh<sup>-1</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id=' Mod ' ng-click='changeState($event)' class='button'>Mod</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='^(3)' ng-click='changeState($event)' class='button'>x<sup>3</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='^(1/3)' ng-click='changeState($event)' class='button'><sup>3</sup>&radic;x</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='*' ng-click='changeState($event)' class='button'>*</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='=' ng-click='changeState($event)' class='button'>=</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='sinh(' ng-click='changeState($event)' class='button'>sinh</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='asinh(' ng-click='changeState($event)' class='button'>sinh<sup>-1</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='e' ng-click='changeState($event)' class='button'>e</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id=' log(' ng-click='changeState($event)' class='button'>log</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id=' 10^(' ng-click='changeState($event)' class='button'>10<sup>x</sup></button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='.' ng-click='changeState($event)' class='button'>.</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='+' ng-click='changeState($event)' class='button'>+</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='-' ng-click='changeState($event)' class='button'>-</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id=',' ng-click='changeState($event)' class='button'>,</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='Sigma' ng-click='changeState($event)' class='button'>&Sigma;</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='n' ng-click='changeState($event)' class='button'>n</button></div></div><div class='col-sm-2 col-xs-2'><div class='row plr5 ptb5'><button id='Pi' ng-click='changeState($event)' class='button'>&Pi;</button></div></div>					 </div>
+                         </div>
+        
+                    </div>
+                    <div id="ajaxwindow2">
+        
+                    </div>
+            
+        </div></div>
+    <script src="main.js"></script>
+    <script src="https://codepen.io/ankit31894/pen/WGpkZd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+</body>
+</html>

@@ -1,210 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./header-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+	<title>About Us Section</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style>
 
+body
+{
+    background-color: #ddd;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background-color: #ddd;
+	padding-top:0px;
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 100px;
+}
+.content-section{
+	float: center;
+	width: 100%;
+    border: 10px solid #fff8b6;
+    padding: 25px;
+    height: auto;
+}
+
+
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+    text-align: center;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#5d5d5d;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #3d3d3d;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #a52a2a;
+	color:#fff;
+}
+
+@media screen and (max-width: 768px){
+	.section{
+		padding-top:35px;
+		}
+
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+
+
+}
+
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.nav-link{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.nav-link .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.nav-link .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.nav-link .navbar a:hover{
+    color:var(--orange);
+}
+
+.nav-link .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-link .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .nav-link{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .nav-link .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .nav-link .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .nav-link .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+	</style>
+</head>	
 <body>
+	
+<header class="nav-link">
 
-    <header class="header">
+    <a href="#" class="logo">  </a>
 
-        <a href="index.html" class="logo"> HSPL </a>
-    
-        <nav class="navbar">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="disclaimer.html">Disclaimer</a>
-          <a href="contact.html">contact us</a>
-        </nav>
-    
-        <div class="icons">
-          <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-      </header>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+    </nav>
 
-    <div class="container">
-        <section class="heading">Privacy Policy</section>
-
-        <div class="content_container">
-            <section class="content">
-                <h2 >Privacy Policy for HeaTRecsolutions</h2>
-                <p>
-                    At Heatrecsolutions, accessible from <a href="https://www.heatrecsolutions.com/">
-                        https://www.heatrecsolutions.com</a> , one of our main priorities
-                    is the privacy of our visitors. This Privacy Policy document contains types of information that is
-                    collected and recorded by Heatrecsolutions and how we use it.
-
-                    If you have additional questions or require more information about our Privacy Policy, do not
-                    hesitate to contact us.
-
-                    This Privacy Policy applies only to our online activities and is valid for visitors to our website
-                    with regards to the information that they shared and/or collect in Heatrecsolutions. This policy is
-                    not applicable to any information collected offline or via channels other than this website.
-                </p>
-
-                <h2>Consent</h2>
-                <p>
-                    By using our website, you hereby consent to our Privacy Policy and agree to its terms.
-                </p>
-
-                <h2>Information we collect</h2>
-                <p>
-                    The personal information that you are asked to provide, and the reasons why you are asked to provide
-                    it, will be made clear to you at the point we ask you to provide your personal information.
-
-                    If you contact us directly, we may receive additional information about you such as your name, email
-                    address, phone number, the contents of the message and/or attachments you may send us, and any other
-                    information you may choose to provide.
-
-                    When you register for an Account, we may ask for your contact information, including items such as
-                    name, company name, address, email address, and telephone number.
-                </p>
-
-                <h2>How we use your information</h2>
-                <p>
-                    We use the information we collect in various ways, including to:
-                </p>
-                <br />
-
-                <ul>
-                    <li>Provide, operate, and maintain our website</li>
-
-                    <li>Improve, personalize, and expand our website</li>
-
-                    <li>Understand and analyze how you use our website</li>
-
-                    <li>Develop new products, services, features, and functionality</li>
-
-                    <!-- &nbsp is used for spacing -->
-                    <li>Communicate with you, either directly or through one of our partners, including for customer
-                        service, to provide you with updates and other information relating &nbsp &nbsp to the website,
-                        and for marketing and promotional purposes</li>
-
-                    <li>Send you emails</li>
-
-                    <li>Find and prevent fraud</li>
-                </ul>
-
-                <h2>Log Files</h2>
-                <p>
-                    Heatrecsolutions follows a standard procedure of using log files. These files log visitors when they
-                    visit websites. All hosting companies do this and a part of hosting services' analytics. The
-                    information collected by log files include internet protocol (IP) addresses, browser type, Internet
-                    Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of
-                    clicks. These are not linked to any information that is personally identifiable. The purpose of the
-                    information is for analyzing trends, administering the site, tracking users' movement on the
-                    website, and gathering demographic information.
-                </p>
-
-                <h2>Cookies and Web Beacons</h2>
-                <p>
-                    Like any other website, Heatrecsolutions uses 'cookies'. These cookies are used to store information
-                    including visitors' preferences, and the pages on the website that the visitor accessed or visited.
-                    The information is used to optimize the users' experience by customizing our web page content based
-                    on visitors' browser type and/or other information.
-                </p>
-
-                <h2>Google DoubleClick DART Cookie</h2>
-                <p>
-                    Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to
-                    serve ads to our site visitors based upon their visit to www.website.com and other sites on the
-                    internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad
-                    and content network Privacy Policy at the following URL – <a
-                        href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
-                </p>
-
-                <h2>Advertising Partners Privacy Policies</h2>
-                <p>
-                    You may consult this list to find the Privacy Policy for each of the advertising partners of
-                    Heatrecsolutions.
-
-                    Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons
-                    that are used in their respective advertisements and links that appear on Heatrecsolutions, which
-                    are sent directly to users' browser. They automatically receive your IP address when this occurs.
-                    These technologies are used to measure the effectiveness of their advertising campaigns and/or to
-                    personalize the advertising content that you see on websites that you visit.
-
-                    Note that Heatrecsolutions has no access to or control over these cookies that are used by
-                    third-party advertisers.
-                </p>
-
-                <h2>Third Party Privacy Policies</h2>
-                <p>
-                    Heatrecsolutions's Privacy Policy does not apply to other advertisers or websites. Thus, we are
-                    advising you to consult the respective Privacy Policies of these third-party ad servers for more
-                    detailed information. It may include their practices and instructions about how to opt-out of
-                    certain options.
-
-                    You can choose to disable cookies through your individual browser options. To know more detailed
-                    information about cookie management with specific web browsers, it can be found at the browsers'
-                    respective websites.
-                </p>
-
-                <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
-                <p>
-                    Under the CCPA, among other rights, California consumers have the right to:
-
-                    Request that a business that collects a consumer's personal data disclose the categories and
-                    specific pieces of personal data that a business has collected about consumers.
-
-                    Request that a business delete any personal data about the consumer that a business has collected.
-
-                    Request that a business that sells a consumer's personal data, not sell the consumer's personal
-                    data.
-
-                    If you make a request, we have one month to respond to you. If you would like to exercise any of
-                    these rights, please contact us.
-                </p>
-
-                <h2>GDPR Data Protection Rights</h2>
-                <p>
-                    We would like to make sure you are fully aware of all of your data protection rights. Every user is
-                    entitled to the following:
-
-                    The right to access – You have the right to request copies of your personal data. We may charge you
-                    a small fee for this service.
-
-                    The right to rectification – You have the right to request that we correct any information you
-                    believe is inaccurate. You also have the right to request that we complete the information you
-                    believe is incomplete.
-
-                    The right to erasure – You have the right to request that we erase your personal data, under certain
-                    conditions.
-
-                    The right to restrict processing – You have the right to request that we restrict the processing of
-                    your personal data, under certain conditions.
-
-                    The right to object to processing – You have the right to object to our processing of your personal
-                    data, under certain conditions.
-
-                    The right to data portability – You have the right to request that we transfer the data that we have
-                    collected to another organization, or directly to you, under certain conditions.
-
-                    If you make a request, we have one month to respond to you. If you would like to exercise any of
-                    these rights, please contact us.
-                </p>
-
-                <h2>Children's Information</h2>
-                <p>
-                    Another part of our priority is adding protection for children while using the internet. We
-                    encourage parents and guardians to observe, participate in, and/or monitor and guide their online
-                    activity.
-
-                    Heatrecsolutions does not knowingly collect any Personal Identifiable Information from children
-                    under the age of 13. If you think that your child provided this kind of information on our website,
-                    we strongly encourage you to contact us immediately and we will do our best efforts to promptly
-                    remove such information from our records.
-                </p>
-            </section>
-        </div>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
     </div>
-</body>
+</header>
+	<div class="section">
+		<div class="container">
+			<div class="content-section">
+				<div class="title">
+					<h1>Privacy Policy</h1>
+				</div>
+				<div class="content">
+                    
+					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos magnam officiis optio, repellat nesciunt inventore commodi soluta veritatis animi fuga dolore delectus in? Incidunt perspiciatis, praesentium at corporis, voluptas deserunt nulla possimus blanditiis excepturi deleniti sed officia, omnis debitis aperiam fuga magni accusamus facilis commodi neque voluptate velit.</p><p> Iure, atque nihil distinctio doloribus reiciendis ipsam, modi corporis, quod amet officiis facere totam deleniti recusandae quae excepturi. Nisi magnam voluptatem distinctio. Repellat quia, deserunt aut temporibus eligendi, eum recusandae ipsam nulla architecto iste deleniti. Similique, consequatur.</p><p> Ea omnis aut unde molestiae vero obcaecati fugit optio repudiandae, minus dolores voluptatum illum eveniet dicta fugiat quam recusandae non accusamus sit voluptate ullam dolor minima incidunt ut cupiditate. Excepturi aliquam similique facere esse, provident possimus dolores, corporis vel error harum magni, quae corrupti rem blanditiis delectus optio beatae? Nemo eaque, reprehenderit voluptas accusantium, ex sed modi praesentium accusamus, voluptate architecto possimus magnam optio adipisci! Non nostrum dolorum officia tempora minima?</p><p> Totam, doloremque, rem animi dolores maiores quis porro eligendi numquam vel optio maxime ea sapiente voluptate debitis nemo accusantium neque, omnis incidunt soluta architecto voluptatibus illo inventore eveniet. Harum soluta perferendis error pariatur qui vero deserunt non! Similique doloremque facere inventore eveniet, aspernatur dolores distinctio minus placeat recusandae fuga nulla, vel, a nemo quas ducimus voluptas nam perspiciatis beatae velit animi pariatur earum expedita! Quis repellat, at debitis eum a quibusdam nam quia natus impedit quas officia quos officiis nostrum. Velit soluta illum ipsam tempore, quas quia cupiditate, ullam totam labore, laborum consequuntur in doloribus adipisci at. Nesciunt quae maxime, excepturi, perferendis officiis praesentium a dolore sunt debitis in exercitationem dolor iusto distinctio magnam assumenda, sit ea error alias. Illum iusto, deleniti odio quo enim incidunt quae neque molestiae itaque pariatur harum natus omnis repudiandae fuga maiores tenetur! Blanditiis pariatur facilis beatae autem delectus.</p>
+				</div>
+				
+			</div>
+		
+		</div>
+	</div>
 
+<script>
+
+
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+
+}
+
+window.onscroll = () =>{
+    navbar.classList.remove('active');
+}
+
+</script>	
+</body>
 </html>

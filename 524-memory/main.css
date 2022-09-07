@@ -1,0 +1,260 @@
+html,
+body{
+  height: 100%;
+}
+
+
+
+.memory-card-game{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  background: #383838;
+  margin-top: 105px;
+}
+
+
+
+.timeline{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 0.8rem;
+  pointer-events: none;
+}
+
+.timeline > div{
+  height: 100%;
+  background: #d12626;
+  opacity: 0.9;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.2s ease;
+}
+
+
+
+.card{
+  position: relative;
+  flex: 0 0 25%;
+  overflow: hidden;
+  background: #fa73a0;
+  border: solid 2px #383838;
+  cursor: pointer;
+}
+
+.card::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 101%;
+  height: 101%;
+  background: #383838;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.3s ease;
+}
+
+.card.active::before,
+.card.hidden::before{
+  opacity: 1;
+}
+
+.card img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0.5rem;
+  margin: auto;
+  transition: opacity, transform 0.3s ease;
+}
+
+.card.active img{
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+.card img,
+.card.hidden img{
+  opacity: 0;
+  transform: scale(0) translate3d(0, 0, 0);  
+}
+
+
+
+#pannel[data-succeed=true] .introduction,
+#pannel[data-succeed=true] .failed{
+  display: none;
+}
+
+#pannel[data-succeed=true] .succeed{
+  display: block;
+}
+
+#pannel[data-succeed=false] .introduction,
+#pannel[data-succeed=false] .succeed{
+  display: none;
+}
+
+#pannel[data-succeed=false] .failed{
+  display: block;
+}
+
+#pannel:not([data-succeed]) .introduction{
+  display: block;
+}
+
+#pannel:not([data-succeed]) .succeed,
+#pannel:not([data-succeed]) .failed{
+  display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}

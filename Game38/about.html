@@ -1,164 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="./header-style.css">
-  <!-- font awesome cdn link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+	<title>About Section</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style>
 
+body
+{
+    background-color: #ddd;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background-color: #ddd;
+	padding-top:0px;
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 100px;
+}
+.content-section{
+	float: center;
+	width: 100%;
+    border: 10px solid #fff8b6;
+    padding: 25px;
+    height: auto;
+}
+
+
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+    text-align: center;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#5d5d5d;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #3d3d3d;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #a52a2a;
+	color:#fff;
+}
+
+@media screen and (max-width: 768px){
+	.section{
+		padding-top:35px;
+		}
+
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+
+
+}
+
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#037c2c;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+
+
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.nav-link{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:gray;
+    box-shadow: var(--box-shadow);
+}
+
+.nav-link .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:white;
+}
+
+
+
+.nav-link .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:white;
+}
+
+.nav-link .navbar a:hover{
+    color:var(--orange);
+}
+
+.nav-link .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-link .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .nav-link{
+        padding:2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .nav-link .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: gray;
+    }
+
+    .nav-link .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .nav-link .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+	</style>
+</head>	
 <body>
+	
+<header class="nav-link">
 
-  <header class="header">
-
-    <a href="index.html" class="logo"> HSPL </a>
+    <a href="#" class="logo">  </a>
 
     <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="contact.html">contact us</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
     </nav>
 
     <div class="icons">
-      <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
     </div>
-  </header>
-
-
-  <div class="container">
-    <section class="heading">About</section>
-
-    <div class="content_container">
-      <section class="content">
-        <h2>What is Typing Master?</h2>
-        <p>
-          Well, as you can guess by the name, it is a typing game where you
-          can increase your typing speed and typing accuracy by playing it
-          daily. It's a funniest way to increase your typing speed, as well as
-          your ability to read the words correctly just at a glance. Now you
-          don't need to look for extra free time to practice to increase your
-          typing ability, you can sit anywhere and start playing this game.
-          It's a single page like game so you can play it on any device. Just
-          open the game, start playing and increase your typing speed day by
-          day
-        </p>
-
-        <h2>How to play?</h2>
-        <p>
-          Playing it is quite simple, you just need to type the word that
-          appears on your screen in the section given just below the word.
-          There will only be a time of a few seconds for each word, the
-          shortest the word the shorter the time period. Type the word
-          correctly as fast as you can, and once you type it correctly the
-          next word will automatically appear, keep typing and new words will
-          automatically keep appearing. If you mistype any word you will lose,
-          then type the appeared word again and your score will restart. Same
-          thing will happen if you can't type the given word in the given
-          time. Keep playing as long as you can and increase your typing
-          speed.
-        </p>
-
-        <h2>Who can play?</h2>
-        <p>
-          Anyone who wants to increase their typing speed can play this game.
-          Of course, students are the ones who will play it the most, but a
-          teacher, a parent, or any other person who wants to increase their
-          typing speed can play it. This game has been designed to enhance
-          typing ability in a fun way. Also those who want to increase their
-          focus, can also use it for that purpose.
-        </p>
-
-        <h2>Why should you play it?</h2>
-        <p>
-          The most simple reason to play this game is to increase your typing
-          ability. It is a single page and very light web game so unlike some
-          other typing games you don't need a decent device to play it, you
-          can play it on any smartphone of any specifications. The purpose of
-          creating this game is to improve the typing speed of the player
-          while learning new words at the same time. So by playing it you will
-          not only increase your typing speed but also keep your vocabulary
-          good.
-        </p>
-
-        <h2>Benefits of playing it?</h2>
-        <p>
-          Its name is Typing Master, so it will definitely make you a master
-          of typing but this is not the only benefit of playing it. Since you
-          have to type the words very fast after seeing it, it will
-          automatically increase your focus. Good typing speed and accuracy
-          are very important skills to have nowadays. Whether you are learning
-          to type or want to improve your skills, you can do it with this
-          typing game. The more you play this game the more your typing speed
-          and accuracy get enhanced. You can reach a decent typing speed and
-          accuracy by playing it for a couple of minutes on a daily basis.
-        </p>
-      </section>
-    </div>
-  </div>
-</body>
+</header>
+	<div class="section">
+		<div class="container">
+			<div class="content-section">
+				<div class="title">
+					<h1>About Us</h1>
+				</div>
+				<div class="content">
+                    
+					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos magnam officiis optio, repellat nesciunt inventore commodi soluta veritatis animi fuga dolore delectus in? Incidunt perspiciatis, praesentium at corporis, voluptas deserunt nulla possimus blanditiis excepturi deleniti sed officia, omnis debitis aperiam fuga magni accusamus facilis commodi neque voluptate velit.</p><p> Iure, atque nihil distinctio doloribus reiciendis ipsam, modi corporis, quod amet officiis facere totam deleniti recusandae quae excepturi. Nisi magnam voluptatem distinctio. Repellat quia, deserunt aut temporibus eligendi, eum recusandae ipsam nulla architecto iste deleniti. Similique, consequatur.</p><p> Ea omnis aut unde molestiae vero obcaecati fugit optio repudiandae, minus dolores voluptatum illum eveniet dicta fugiat quam recusandae non accusamus sit voluptate ullam dolor minima incidunt ut cupiditate. Excepturi aliquam similique facere esse, provident possimus dolores, corporis vel error harum magni, quae corrupti rem blanditiis delectus optio beatae? Nemo eaque, reprehenderit voluptas accusantium, ex sed modi praesentium accusamus, voluptate architecto possimus magnam optio adipisci! Non nostrum dolorum officia tempora minima?</p><p> Totam, doloremque, rem animi dolores maiores quis porro eligendi numquam vel optio maxime ea sapiente voluptate debitis nemo accusantium neque, omnis incidunt soluta architecto voluptatibus illo inventore eveniet. Harum soluta perferendis error pariatur qui vero deserunt non! Similique doloremque facere inventore eveniet, aspernatur dolores distinctio minus placeat recusandae fuga nulla, vel, a nemo quas ducimus voluptas nam perspiciatis beatae velit animi pariatur earum expedita! Quis repellat, at debitis eum a quibusdam nam quia natus impedit quas officia quos officiis nostrum. Velit soluta illum ipsam tempore, quas quia cupiditate, ullam totam labore, laborum consequuntur in doloribus adipisci at. Nesciunt quae maxime, excepturi, perferendis officiis praesentium a dolore sunt debitis in exercitationem dolor iusto distinctio magnam assumenda, sit ea error alias. Illum iusto, deleniti odio quo enim incidunt quae neque molestiae itaque pariatur harum natus omnis repudiandae fuga maiores tenetur! Blanditiis pariatur facilis beatae autem delectus.</p>
+				</div>
+				
+			</div>
+		
+		</div>
+	</div>
 
 <script>
 
 
+let navbar = document.querySelector('.navbar');
 
-  let navbar = document.querySelector('.navbar');
-
-  document.querySelector('#menu-btn').onclick = () => {
+document.querySelector('#menu-btn').onclick = () =>{
     navbar.classList.toggle('active');
 
-  }
+}
 
-  window.onscroll = () => {
+window.onscroll = () =>{
     navbar.classList.remove('active');
-  }
+}
 
-  var swiper = new Swiper(".product-slider", {
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 7500,
-      disableOnInteraction: false,
-    },
-    centeredSlides: true,
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1020: {
-        slidesPerView: 3,
-      },
-    },
-  });
-
-  var swiper = new Swiper(".review-slider", {
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 7500,
-      disableOnInteraction: false,
-    },
-    centeredSlides: true,
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1020: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
-
+</script>	
+</body>
 </html>
